@@ -115,7 +115,7 @@ O sistema opera segundo os seguintes princípios fundamentais:
 ## Estrutura do Repositório
 
 ```
-instruction.json                 # Regras e comportamento do sistema principal
+pefes_instructions.json                 # Regras e comportamento do sistema principal
 /dictionaries
 └── *.json                       # Dicionários de dados específicos para cada conjunto de dados
 README.md

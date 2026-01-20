@@ -223,11 +223,16 @@
     },
     "SG_UF_NOT": {
       "name": "UF de Notificação",
-      "description": "Código da Unidade Federativa onde está localizada a unidade de saúde notificadora",
+      "description": "Código numérico da Unidade Federativa onde está localizada a unidade de saúde notificadora",
       "data_type": "integer",
       "field_type": "char(2)",
       "required": true,
-      "reference": "Códigos padronizados pelo IBGE",
+      "reference": "Código numérico da UF conforme tabela oficial do IBGE (ex.: MA = 21, SP = 35)",
+      "examples": {
+        "21": "Maranhão",
+        "35": "São Paulo",
+        "33": "Rio de Janeiro"
+      },
       "anos_disponiveis": [
         2021,
         2022,
@@ -455,11 +460,16 @@
     },
     "SG_UF": {
       "name": "UF de Residência",
-      "description": "Código da Unidade Federada de residência do paciente",
+      "description": "Código numérico da Unidade Federada de residência do paciente",
       "data_type": "integer",
       "field_type": "char(2)",
       "required": "Se residente no Brasil",
-      "reference": "Códigos padronizados pelo IBGE",
+      "reference": "Código numérico da UF conforme tabela oficial do IBGE (ex.: MA = 21, SP = 35)",
+      "examples": {
+        "21": "Maranhão",
+        "35": "São Paulo",
+        "33": "Rio de Janeiro"
+      },
       "anos_disponiveis": [
         2021,
         2022,
