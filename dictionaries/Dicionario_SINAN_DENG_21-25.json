@@ -1,0 +1,2461 @@
+{
+  "metadata": {
+    "description": "Estrutura de dados do SINAN - Sistema de Informação de Agravos de Notificação para Dengue",
+    "source": "Ministério da Saúde - SVSA - DAENT",
+    "total_variables": 121,
+    "date_format": "YYYY-MM-DD",
+    "epidemiological_week_format": "YYYYSS",
+    "anos_disponiveis": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  "allowed_variables": [
+    "ACIDO_PEPT",
+    "ALRM_ABDOM",
+    "ALRM_HEMAT",
+    "ALRM_HEPAT",
+    "ALRM_HIPOT",
+    "ALRM_LETAR",
+    "ALRM_LIQ",
+    "ALRM_PLAQ",
+    "ALRM_SANG",
+    "ALRM_VOM",
+    "ANO_NASC",
+    "ARTRALGIA",
+    "ARTRITE",
+    "AUTO_IMUNE",
+    "CEFALEIA",
+    "CLASSI_FIN",
+    "CLINC_CHIK",
+    "COMPLICA",
+    "COMUNINF",
+    "CONJUNTVIT",
+    "CON_FHD",
+    "COPAISINF",
+    "COUFINF",
+    "CRITERIO",
+    "CS_ESCOL_N",
+    "CS_FLXRET",
+    "CS_GESTANT",
+    "CS_RACA",
+    "CS_SEXO",
+    "DIABETES",
+    "DOENCA_TRA",
+    "DOR_COSTAS",
+    "DOR_RETRO",
+    "DT_ALRM",
+    "DT_CHIK_S1",
+    "DT_CHIK_S2",
+    "DT_DIGITA",
+    "DT_ENCERRA",
+    "DT_GRAV",
+    "DT_INTERNA",
+    "DT_INVEST",
+    "DT_NOTIFIC",
+    "DT_NS1",
+    "DT_OBITO",
+    "DT_PCR",
+    "DT_PRNT",
+    "DT_SIN_PRI",
+    "DT_SORO",
+    "DT_VIRAL",
+    "EPISTAXE",
+    "EVIDENCIA",
+    "EVOLUCAO",
+    "EXANTEMA",
+    "FEBRE",
+    "FLXRECEBI",
+    "GENGIVO",
+    "GRAV_AST",
+    "GRAV_CONSC",
+    "GRAV_CONV",
+    "GRAV_ENCH",
+    "GRAV_EXTRE",
+    "GRAV_HEMAT",
+    "GRAV_HIPOT",
+    "GRAV_INSUF",
+    "GRAV_MELEN",
+    "GRAV_METRO",
+    "GRAV_MIOC",
+    "GRAV_ORGAO",
+    "GRAV_PULSO",
+    "GRAV_SANG",
+    "GRAV_TAQUI",
+    "HEMATOLOG",
+    "HEMATURA",
+    "HEPATOPAT",
+    "HIPERTENSA",
+    "HISTOPA_N",
+    "HOSPITALIZ",
+    "ID_AGRAVO",
+    "ID_MN_RESI",
+    "ID_MUNICIP",
+    "ID_OCUPA_N",
+    "ID_PAIS",
+    "ID_REGIONA",
+    "ID_RG_RESI",
+    "ID_UNIDADE",
+    "IMUNOH_N",
+    "LACO",
+    "LACO_N",
+    "LEUCOPENIA",
+    "MANI_HEMOR",
+    "METRO",
+    "MIALGIA",
+    "MIGRADO_W",
+    "MUNICIPIO",
+    "NAUSEA",
+    "NDUPLIC_N",
+    "NU_ANO",
+    "NU_IDADE_N",
+    "PETEQUIAS",
+    "PETEQUIA_N",
+    "PLAQ_MENOR",
+    "PLASMATICO",
+    "RENAL",
+    "RESUL_NS1",
+    "RESUL_PCR_",
+    "RESUL_PRNT",
+    "RESUL_SORO",
+    "RESUL_VI_N",
+    "RES_CHIKS1",
+    "RES_CHIKS2",
+    "SANGRAM",
+    "SEM_NOT",
+    "SEM_PRI",
+    "SG_UF",
+    "SG_UF_NOT",
+    "SOROTIPO",
+    "TPAUTOCTO",
+    "TP_NOT",
+    "TP_SISTEMA",
+    "UF",
+    "VOMITO"
+  ],
+  "variables": {
+    "TP_NOT": {
+      "name": "Tipo de Notificação",
+      "description": "Identifica o tipo da notificação",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Negativa",
+        "2": "Individual",
+        "3": "Surto",
+        "4": "Agregado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ID_AGRAVO": {
+      "name": "Agravo",
+      "description": "Nome e código do agravo notificado segundo CID-10",
+      "data_type": "character",
+      "field_type": "char(5)",
+      "required": true,
+      "values": {
+        "A90": "Dengue"
+      },
+      "notes": "Código da classificação internacional de doenças (CID-10)",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_NOTIFIC": {
+      "name": "Data da Notificação",
+      "description": "Data de preenchimento da ficha de notificação",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "required": true,
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "SEM_NOT": {
+      "name": "Semana Epidemiológica da Notificação",
+      "description": "Semana epidemiológica que o caso foi notificado",
+      "data_type": "integer",
+      "field_type": "char(6)",
+      "format": "AAAASS",
+      "auto_filled": true,
+      "source": "Calculado automaticamente a partir da data de notificação",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "NU_ANO": {
+      "name": "Ano da Notificação",
+      "description": "Ano da notificação",
+      "data_type": "integer",
+      "field_type": "char(4)",
+      "auto_filled": true,
+      "source": "Extraído automaticamente da data de notificação",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "SG_UF_NOT": {
+      "name": "UF de Notificação",
+      "description": "Código da Unidade Federativa onde está localizada a unidade de saúde notificadora",
+      "data_type": "integer",
+      "field_type": "char(2)",
+      "required": true,
+      "reference": "Códigos padronizados pelo IBGE",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ID_MUNICIP": {
+      "name": "Município de Notificação",
+      "description": "Código do município onde está localizada a unidade de saúde notificadora",
+      "data_type": "integer",
+      "field_type": "char(6)",
+      "required": true,
+      "reference": "Códigos IBGE de municípios",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ID_REGIONA": {
+      "name": "Regional",
+      "description": "Regional de saúde onde está localizado o município da unidade notificadora",
+      "data_type": "integer",
+      "field_type": "char(8)",
+      "auto_filled": true,
+      "source": "Relacionado automaticamente com o município",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ID_UNIDADE": {
+      "name": "Unidade de Saúde",
+      "description": "Código da unidade de saúde que realizou o atendimento e notificação",
+      "data_type": "integer",
+      "field_type": "char(7)",
+      "required": true,
+      "reference": "Cadastro Nacional de Estabelecimento de Saúde (CNES)",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_SIN_PRI": {
+      "name": "Data dos Primeiros Sintomas",
+      "description": "Data dos primeiros sintomas do caso",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "required": true,
+      "validation": "Deve ser <= Data de Notificação",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "SEM_PRI": {
+      "name": "Semana Epidemiológica dos Primeiros Sintomas",
+      "description": "Semana epidemiológica dos primeiros sintomas",
+      "data_type": "integer",
+      "field_type": "char(6)",
+      "format": "AAAASS",
+      "auto_filled": true,
+      "source": "Calculado a partir da data dos primeiros sintomas",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ANO_NASC": {
+      "name": "Ano de Nascimento",
+      "description": "Ano de nascimento do paciente",
+      "data_type": "integer",
+      "field_type": "char(4)",
+      "format": "AAAA",
+      "required": "Se idade não preenchida",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "NU_IDADE_N": {
+      "name": "Idade",
+      "description": "Idade do paciente na data dos primeiros sintomas",
+      "data_type": "integer",
+      "field_type": "num(4)",
+      "required": "Se ano de nascimento não preenchido",
+      "format": {
+        "structure": "1º dígito = unidade de tempo + 3 dígitos = valor",
+        "units": {
+          "1": "Hora",
+          "2": "Dia",
+          "3": "Mês",
+          "4": "Ano"
+        },
+        "examples": {
+          "3009": "9 meses",
+          "4018": "18 anos"
+        }
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CS_SEXO": {
+      "name": "Sexo",
+      "description": "Sexo do paciente",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "M": "Masculino",
+        "F": "Feminino",
+        "I": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CS_GESTANT": {
+      "name": "Gestante",
+      "description": "Idade gestacional da paciente",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": "Se sexo = F",
+      "values": {
+        "1": "1º Trimestre",
+        "2": "2º Trimestre",
+        "3": "3º Trimestre",
+        "4": "Idade gestacional ignorada",
+        "5": "Não",
+        "6": "Não se aplica",
+        "9": "Ignorado"
+      },
+      "auto_rules": {
+        "sexo_masculino": "Preenchido automaticamente com 6",
+        "idade_menor_10": "Preenchido automaticamente com 6"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CS_RACA": {
+      "name": "Raça/Cor",
+      "description": "Cor ou raça declarada pela pessoa",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "category": "essential",
+      "values": {
+        "1": "Branca",
+        "2": "Preta",
+        "3": "Amarela",
+        "4": "Parda",
+        "5": "Indígena",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CS_ESCOL_N": {
+      "name": "Escolaridade",
+      "description": "Série e grau que a pessoa está frequentando ou frequentou",
+      "data_type": "integer",
+      "field_type": "char(2)",
+      "category": "essential",
+      "values": {
+        "0": "Analfabeto",
+        "1": "1ª a 4ª série incompleta do EF",
+        "2": "4ª série completa do EF",
+        "3": "5ª a 8ª série incompleta do EF",
+        "4": "Ensino fundamental completo",
+        "5": "Ensino médio incompleto",
+        "6": "Ensino médio completo",
+        "7": "Educação superior incompleta",
+        "8": "Educação superior completa",
+        "9": "Ignorado/Branco",
+        "10": "Não se aplica"
+      },
+      "auto_rules": {
+        "idade_menor_7": "Preenchido automaticamente com 10"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "SG_UF": {
+      "name": "UF de Residência",
+      "description": "Código da Unidade Federada de residência do paciente",
+      "data_type": "integer",
+      "field_type": "char(2)",
+      "required": "Se residente no Brasil",
+      "reference": "Códigos padronizados pelo IBGE",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ID_MN_RESI": {
+      "name": "Município de Residência",
+      "description": "Código do município de residência do caso notificado",
+      "data_type": "integer",
+      "field_type": "char(6)",
+      "required": "Quando UF é preenchida",
+      "reference": "Códigos IBGE de municípios",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ID_RG_RESI": {
+      "name": "Regional de Saúde de Residência",
+      "description": "Regional de saúde do município de residência do paciente",
+      "data_type": "integer",
+      "field_type": "char(8)",
+      "auto_filled": true,
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ID_PAIS": {
+      "name": "País",
+      "description": "País onde residia o paciente por ocasião da notificação",
+      "data_type": "integer",
+      "field_type": "char(4)",
+      "required": true,
+      "auto_rules": {
+        "uf_preenchida": "Preenchido automaticamente com 'Brasil'"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_INVEST": {
+      "name": "Data da Investigação",
+      "description": "Data de início da investigação do caso",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "required": true,
+      "validation": "Deve ser >= data da notificação",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ID_OCUPA_N": {
+      "name": "Ocupação",
+      "description": "Ocupação/ramo de atividade econômica do paciente",
+      "data_type": "character",
+      "field_type": "char(6)",
+      "reference": "Tabela de Ocupação",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "FEBRE": {
+      "name": "Febre",
+      "description": "Sinal clínico - Febre",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "MIALGIA": {
+      "name": "Mialgia",
+      "description": "Sinal clínico - Mialgia",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CEFALEIA": {
+      "name": "Cefaleia",
+      "description": "Sinal clínico - Cefaleia",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "EXANTEMA": {
+      "name": "Exantema",
+      "description": "Sinal clínico - Exantema",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "VOMITO": {
+      "name": "Vômito",
+      "description": "Sinal clínico - Vômito",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "NAUSEA": {
+      "name": "Náusea",
+      "description": "Sinal clínico - Náusea",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DOR_COSTAS": {
+      "name": "Dor nas Costas",
+      "description": "Sinal clínico - Dor nas costas",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CONJUNTVIT": {
+      "name": "Conjuntivite",
+      "description": "Sinal clínico - Conjuntivite",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ARTRITE": {
+      "name": "Artrite",
+      "description": "Sinal clínico - Artrite",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ARTRALGIA": {
+      "name": "Artralgia Intensa",
+      "description": "Sinal clínico - Artralgia intensa",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PETEQUIA_N": {
+      "name": "Petéquias",
+      "description": "Sinal clínico - Petéquias",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "LEUCOPENIA": {
+      "name": "Leucopenia",
+      "description": "Sinal clínico - Leucopenia",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "LACO": {
+      "name": "Prova do Laço",
+      "description": "Sinal clínico - Prova do laço",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DOR_RETRO": {
+      "name": "Dor Retroorbital",
+      "description": "Sinal clínico - Dor retroorbital",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DIABETES": {
+      "name": "Diabetes",
+      "description": "Doença preexistente - Diabetes",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "HEMATOLOG": {
+      "name": "Doenças Hematológicas",
+      "description": "Doença preexistente - Doenças hematológicas",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "HEPATOPAT": {
+      "name": "Hepatopatias",
+      "description": "Doença preexistente - Hepatopatias",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "RENAL": {
+      "name": "Doença Renal Crônica",
+      "description": "Doença preexistente - Doença renal crônica",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "HIPERTENSA": {
+      "name": "Hipertensão Arterial",
+      "description": "Doença preexistente - Hipertensão arterial",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ACIDO_PEPT": {
+      "name": "Doença Ácido-Péptica",
+      "description": "Doença preexistente - Doença ácido-péptica",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "AUTO_IMUNE": {
+      "name": "Doenças Auto-imunes",
+      "description": "Doença preexistente - Doenças auto-imunes",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": true,
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_CHIK_S1": {
+      "name": "Data Chikungunya Soro 1",
+      "description": "Data da coleta do exame sorológico (IgM) Chikungunya soro 1",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "enabled_for": "Chikungunya apenas",
+      "validation": "Deve ser >= data de primeiros sintomas",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_CHIK_S2": {
+      "name": "Data Chikungunya Soro 2",
+      "description": "Data da coleta do exame sorológico (IgM) Chikungunya soro 2",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "enabled_for": "Chikungunya apenas",
+      "validation": "Deve ser > data da primeira coleta",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_PRNT": {
+      "name": "Data PRNT",
+      "description": "Data da coleta do exame PRNT",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "enabled_for": "Chikungunya apenas",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "RES_CHIKS1": {
+      "name": "Resultado Chikungunya Soro 1",
+      "description": "Resultado do exame sorológico (IgM) Chikungunya soro 1",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Chikungunya apenas",
+      "values": {
+        "1": "Reagente",
+        "2": "Não Reagente",
+        "3": "Inconclusivo",
+        "4": "Não realizado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "RES_CHIKS2": {
+      "name": "Resultado Chikungunya Soro 2",
+      "description": "Resultado do exame sorológico (IgM) Chikungunya soro 2",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Chikungunya apenas",
+      "values": {
+        "1": "Reagente",
+        "2": "Não Reagente",
+        "3": "Inconclusivo",
+        "4": "Não realizado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "RESUL_PRNT": {
+      "name": "Resultado PRNT",
+      "description": "Resultado do exame PRNT",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Chikungunya apenas",
+      "values": {
+        "1": "Reagente",
+        "2": "Não Reagente",
+        "3": "Inconclusivo",
+        "4": "Não realizado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_SORO": {
+      "name": "Data Sorologia Dengue",
+      "description": "Data da coleta do exame sorológico (IgM) Dengue",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "enabled_for": "Dengue apenas",
+      "validation": "Deve ser >= data de primeiros sintomas",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "RESUL_SORO": {
+      "name": "Resultado Sorologia Dengue",
+      "description": "Resultado do exame sorológico (IgM) Dengue",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue apenas",
+      "values": {
+        "1": "Reagente",
+        "2": "Não Reagente",
+        "3": "Inconclusivo",
+        "4": "Não realizado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_NS1": {
+      "name": "Data NS1",
+      "description": "Data da coleta do exame NS1",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "enabled_for": "Dengue apenas",
+      "validation": "Deve ser >= data de primeiros sintomas",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "RESUL_NS1": {
+      "name": "Resultado NS1",
+      "description": "Resultado do exame NS1",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue apenas",
+      "values": {
+        "1": "Reagente",
+        "2": "Não Reagente",
+        "3": "Inconclusivo",
+        "4": "Não realizado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_VIRAL": {
+      "name": "Data Isolamento Viral",
+      "description": "Data da coleta do isolamento viral",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "enabled_for": "Dengue ou Chikungunya",
+      "validation": "Deve ser >= data de primeiros sintomas",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "RESUL_VI_N": {
+      "name": "Resultado Isolamento Viral",
+      "description": "Resultado do exame de isolamento viral",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue ou Chikungunya",
+      "values": {
+        "1": "Reagente",
+        "2": "Não Reagente",
+        "3": "Inconclusivo",
+        "4": "Não realizado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_PCR": {
+      "name": "Data RT-PCR",
+      "description": "Data de coleta do exame RT-PCR",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "enabled_for": "Dengue ou Chikungunya",
+      "validation": "Deve ser >= data de primeiros sintomas",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "RESUL_PCR_": {
+      "name": "Resultado RT-PCR",
+      "description": "Resultado do exame RT-PCR",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue ou Chikungunya",
+      "values": {
+        "1": "Reagente",
+        "2": "Não Reagente",
+        "3": "Inconclusivo",
+        "4": "Não realizado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "SOROTIPO": {
+      "name": "Sorotipo",
+      "description": "Sorotipo do vírus dengue",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue apenas",
+      "required": "Se isolamento viral ou RT-PCR = positivo",
+      "values": {
+        "1": "DEN 1",
+        "2": "DEN 2",
+        "3": "DEN 3",
+        "4": "DEN 4"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "HISTOPA_N": {
+      "name": "Histopatologia",
+      "description": "Resultado do exame de histopatologia",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue apenas",
+      "values": {
+        "1": "Reagente",
+        "2": "Não Reagente",
+        "3": "Inconclusivo",
+        "4": "Não realizado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "IMUNOH_N": {
+      "name": "Imunohistoquímica",
+      "description": "Resultado do exame de imunohistoquímica",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue apenas",
+      "values": {
+        "1": "Reagente",
+        "2": "Não Reagente",
+        "3": "Inconclusivo",
+        "4": "Não realizado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "HOSPITALIZ": {
+      "name": "Hospitalização",
+      "description": "Informa se ocorreu hospitalização",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_INTERNA": {
+      "name": "Data da Internação",
+      "description": "Data de internação do paciente",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "enabled_when": "HOSPITALIZ = 1",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "UF": {
+      "name": "UF Hospitalização",
+      "description": "UF onde o paciente foi hospitalizado",
+      "data_type": "integer",
+      "field_type": "char(2)",
+      "enabled_when": "HOSPITALIZ = 1",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "MUNICIPIO": {
+      "name": "Município Hospitalização",
+      "description": "Código do município onde o paciente foi hospitalizado",
+      "data_type": "integer",
+      "field_type": "char(6)",
+      "enabled_when": "HOSPITALIZ = 1",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "TPAUTOCTO": {
+      "name": "Caso Autóctone",
+      "description": "Indica se o caso é autóctone do município de residência",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "required": "Se classificação final = confirmado",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "3": "Indeterminado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "diferencas": [
+        "Variável presente em 2021 e 2022 mas completamente vazia"
+      ]
+    },
+    "COUFINF": {
+      "name": "UF Provável de Infecção",
+      "description": "UF onde o paciente foi provavelmente infectado",
+      "data_type": "integer",
+      "field_type": "char(2)",
+      "required": "Se país de infecção = Brasil e classificação final = confirmado",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "diferencas": [
+        "Variável presente em 2021 e 2022 mas completamente vazia"
+      ]
+    },
+    "COPAISINF": {
+      "name": "País Provável de Infecção",
+      "description": "País onde o paciente foi provavelmente infectado",
+      "data_type": "integer",
+      "field_type": "char(4)",
+      "required": "Se classificação final = confirmado",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "diferencas": [
+        "Variável presente em 2021 e 2022 mas completamente vazia"
+      ]
+    },
+    "COMUNINF": {
+      "name": "Município Provável de Infecção",
+      "description": "Município onde o paciente foi provavelmente infectado",
+      "data_type": "integer",
+      "field_type": "char(6)",
+      "required": "Se país de infecção = Brasil e classificação final = confirmado",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "diferencas": [
+        "Variável presente em 2021 e 2022 mas completamente vazia"
+      ]
+    },
+    "CLASSI_FIN": {
+      "name": "Classificação Final",
+      "description": "Classificação final do caso após investigação",
+      "data_type": "integer",
+      "field_type": "char(2)",
+      "required": "Quando data de encerramento preenchida",
+      "values": {
+        "5": "Descartado",
+        "8": "Inconclusivo",
+        "10": "Dengue",
+        "11": "Dengue com Sinais de Alarme",
+        "12": "Dengue Grave"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "diferencas": [
+        "Valor 5 ('Descartado') removido a partir de 2022"
+      ]
+    },
+    "CRITERIO": {
+      "name": "Critério de Confirmação",
+      "description": "Critério utilizado para confirmação ou descarte do caso",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "category": "essential",
+      "values": {
+        "0": "Ignorado",
+        "1": "Laboratorial",
+        "2": "Clínico-epidemiológico",
+        "3": "Clínico",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DOENCA_TRA": {
+      "name": "Doença Relacionada ao Trabalho",
+      "description": "Indica se a doença está relacionada ao trabalho",
+      "data_type": "logical",
+      "field_type": "char(1)",
+      "category": "essential",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CLINC_CHIK": {
+      "name": "Apresentação Clínica Chikungunya",
+      "description": "Apresentação clínica do caso de Chikungunya",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Chikungunya confirmada laboratorialmente ou clínico-epidemiologicamente",
+      "values": {
+        "1": "Aguda",
+        "2": "Crônica"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "EVOLUCAO": {
+      "name": "Evolução do Caso",
+      "description": "Evolução do caso",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "category": "essential",
+      "values": {
+        "1": "Cura",
+        "2": "Óbito pelo agravo",
+        "3": "Óbito por outras causas",
+        "4": "Óbito em investigação",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_OBITO": {
+      "name": "Data do Óbito",
+      "description": "Data do óbito",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "required": "Se evolução = óbito",
+      "validation": "Deve ser >= data dos primeiros sintomas",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_ENCERRA": {
+      "name": "Data do Encerramento",
+      "description": "Data do encerramento do caso",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "required": "Quando classificação preenchida e critério ≠ 3",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ALRM_HIPOT": {
+      "name": "Alarme - Hipotensão",
+      "description": "Dengue com sinais de alarme - Hipotensão",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue com Sinais de Alarme ou Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ALRM_PLAQ": {
+      "name": "Alarme - Queda de Plaquetas",
+      "description": "Dengue com sinais de alarme - Queda abrupta de plaquetas",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue com Sinais de Alarme ou Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ALRM_VOM": {
+      "name": "Alarme - Vômitos Persistentes",
+      "description": "Dengue com sinais de alarme - Vômitos persistentes",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue com Sinais de Alarme ou Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ALRM_SANG": {
+      "name": "Alarme - Sangramento",
+      "description": "Dengue com sinais de alarme - Sangramento de mucosa/outras hemorragias",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue com Sinais de Alarme ou Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ALRM_HEMAT": {
+      "name": "Alarme - Aumento Hematócrito",
+      "description": "Dengue com sinais de alarme - Aumento hematócrito",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue com Sinais de Alarme ou Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ALRM_ABDOM": {
+      "name": "Alarme - Dor Abdominal",
+      "description": "Dengue com sinais de alarme - Dor abdominal",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue com Sinais de Alarme ou Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ALRM_LETAR": {
+      "name": "Alarme - Letargia",
+      "description": "Dengue com sinais de alarme - Letargia ou irritabilidade",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue com Sinais de Alarme ou Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ALRM_HEPAT": {
+      "name": "Alarme - Hepatomegalia",
+      "description": "Dengue com sinais de alarme - Hepatomegalia",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue com Sinais de Alarme ou Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ALRM_LIQ": {
+      "name": "Alarme - Acúmulo de Líquidos",
+      "description": "Dengue com sinais de alarme - Acúmulo de líquidos",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue com Sinais de Alarme ou Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_ALRM": {
+      "name": "Data Sinais de Alarme",
+      "description": "Data de início dos sinais de alarme",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "enabled_for": "Dengue Grave",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "GRAV_PULSO": {
+      "name": "Grave - Pulso Débil",
+      "description": "Dengue grave - Pulso débil ou indetectável",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "GRAV_CONV": {
+      "name": "Grave - PA Convergente",
+      "description": "Dengue grave - PA convergente",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "GRAV_ENCH": {
+      "name": "Grave - Enchimento Capilar",
+      "description": "Dengue grave - Tempo de enchimento capilar",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "GRAV_INSUF": {
+      "name": "Grave - Insuficiência Respiratória",
+      "description": "Dengue grave - Acúmulo de líquidos com insuficiência respiratória",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "GRAV_TAQUI": {
+      "name": "Grave - Taquicardia",
+      "description": "Dengue grave - Taquicardia",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "GRAV_EXTRE": {
+      "name": "Grave - Extremidades Frias",
+      "description": "Dengue grave - Extremidades frias",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "GRAV_HIPOT": {
+      "name": "Grave - Hipotensão Tardia",
+      "description": "Dengue grave - Hipotensão arterial em fase tardia",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "GRAV_HEMAT": {
+      "name": "Grave - Hematêmese",
+      "description": "Dengue grave - Hematêmese",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "GRAV_MELEN": {
+      "name": "Grave - Melena",
+      "description": "Dengue grave - Melena",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "GRAV_METRO": {
+      "name": "Grave - Metrorragia",
+      "description": "Dengue grave - Metrorragia volumosa",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "GRAV_SANG": {
+      "name": "Grave - Sangramento SNC",
+      "description": "Dengue grave - Sangramento do SNC",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "GRAV_AST": {
+      "name": "Grave - AST/ALT >1000",
+      "description": "Dengue grave - AST/ALT >1000",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "GRAV_MIOC": {
+      "name": "Grave - Miocardite",
+      "description": "Dengue grave - Miocardite",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "GRAV_CONSC": {
+      "name": "Grave - Alteração Consciência",
+      "description": "Dengue grave - Alteração da consciência",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "GRAV_ORGAO": {
+      "name": "Grave - Outros Órgãos",
+      "description": "Dengue grave - Outros órgãos",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "enabled_for": "Dengue Grave",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_GRAV": {
+      "name": "Data Dengue Grave",
+      "description": "Data de início dos sintomas de dengue grave",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "enabled_for": "Dengue Grave",
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "MANI_HEMOR": {
+      "name": "Manifestações Hemorrágicas",
+      "description": "Presença de manifestações hemorrágicas",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "EPISTAXE": {
+      "name": "Epistaxe",
+      "description": "Manifestação hemorrágica - Epistaxe",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "GENGIVO": {
+      "name": "Gengivorragia",
+      "description": "Manifestação hemorrágica - Gengivorragia",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "METRO": {
+      "name": "Metrorragia",
+      "description": "Manifestação hemorrágica - Metrorragia",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PETEQUIAS": {
+      "name": "Petéquias",
+      "description": "Manifestação hemorrágica - Petéquias",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "HEMATURA": {
+      "name": "Hematúria",
+      "description": "Manifestação hemorrágica - Hematúria",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "SANGRAM": {
+      "name": "Sangramento Gastrointestinal",
+      "description": "Manifestação hemorrágica - Sangramento gastrointestinal",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "LACO_N": {
+      "name": "Prova do Laço Positiva",
+      "description": "Manifestação hemorrágica - Prova do laço positiva",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PLASMATICO": {
+      "name": "Extravasamento Plasmático",
+      "description": "Houve extravasamento plasmático",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "EVIDENCIA": {
+      "name": "Evidenciado",
+      "description": "Se sim, evidenciado por",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PLAQ_MENOR": {
+      "name": "Plaquetas Menor",
+      "description": "Valor menor de plaquetas",
+      "data_type": "integer",
+      "field_type": "char(7)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CON_FHD": {
+      "name": "Caso de FHD",
+      "description": "No caso de FHD/SCD, especificar",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "COMPLICA": {
+      "name": "Complicações",
+      "description": "No caso de dengue com complicações",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "TP_SISTEMA": {
+      "name": "Tipo de Sistema",
+      "description": "Identifica o sistema em que o registro foi inserido",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "auto_filled": true,
+      "values": {
+        "1": "Sinan Net",
+        "2": "Sinan Online"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "NDUPLIC_N": {
+      "name": "Não Duplicar",
+      "description": "Identifica duplicidade",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "values": {
+        "0": "Não identificado",
+        "1": "Não é duplicidade (não listar)",
+        "2": "Duplicidade (não contar)"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_DIGITA": {
+      "name": "Data da Digitação",
+      "description": "Data de digitação da primeira inclusão da notificação",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "auto_filled": true,
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CS_FLXRET": {
+      "name": "Fluxo de Retorno",
+      "description": "Identifica se o registro está habilitado ou foi enviado pelo fluxo de retorno",
+      "data_type": "integer",
+      "field_type": "char(1)",
+      "values": {
+        "0": "Não",
+        "1": "Habilitado para envio",
+        "2": "Enviado"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "diferencas": [
+        "Variável presente em 2021 e 2022 mas completamente vazia"
+      ]
+    },
+    "FLXRECEBI": {
+      "name": "Recebida por Fluxo de Retorno",
+      "description": "Identifica se o registro foi recebido pelo fluxo de retorno",
+      "data_type": "integer",
+      "field_type": "char(7)",
+      "internal_field": true,
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "diferencas": [
+        "Variável presente mas com preenchimento efetivo apenas a partir de 2025"
+      ]
+    },
+    "MIGRADO_W": {
+      "name": "Identifica Migração",
+      "description": "Identifica se o registro é oriundo da migração do Sinan Windows",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "internal_field": true,
+      "values": {
+        "1": "Migrado do Sinan Windows"
+      },
+      "anos_disponiveis": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    }
+  },
+  "field_categories": {
+    "required_fields": [
+      "TP_NOT",
+      "ID_AGRAVO",
+      "DT_NOTIFIC",
+      "SG_UF_NOT",
+      "ID_MUNICIP",
+      "ID_UNIDADE",
+      "DT_SIN_PRI",
+      "CS_SEXO",
+      "DT_INVEST"
+    ],
+    "essential_fields": [
+      "CS_RACA",
+      "CS_ESCOL_N",
+      "CRITERIO",
+      "DOENCA_TRA",
+      "EVOLUCAO"
+    ],
+    "clinical_signs": [
+      "FEBRE",
+      "MIALGIA",
+      "CEFALEIA",
+      "EXANTEMA",
+      "VOMITO",
+      "NAUSEA",
+      "DOR_COSTAS",
+      "CONJUNTVIT",
+      "ARTRITE",
+      "ARTRALGIA",
+      "PETEQUIA_N",
+      "LEUCOPENIA",
+      "LACO",
+      "DOR_RETRO"
+    ],
+    "preexisting_conditions": [
+      "DIABETES",
+      "HEMATOLOG",
+      "HEPATOPAT",
+      "RENAL",
+      "HIPERTENSA",
+      "ACIDO_PEPT",
+      "AUTO_IMUNE"
+    ],
+    "laboratory_tests": [
+      "DT_SORO",
+      "RESUL_SORO",
+      "DT_NS1",
+      "RESUL_NS1",
+      "DT_VIRAL",
+      "RESUL_VI_N",
+      "DT_PCR",
+      "RESUL_PCR_",
+      "SOROTIPO",
+      "HISTOPA_N",
+      "IMUNOH_N"
+    ],
+    "alarm_signs": [
+      "ALRM_HIPOT",
+      "ALRM_PLAQ",
+      "ALRM_VOM",
+      "ALRM_SANG",
+      "ALRM_HEMAT",
+      "ALRM_ABDOM",
+      "ALRM_LETAR",
+      "ALRM_HEPAT",
+      "ALRM_LIQ"
+    ],
+    "severe_dengue": [
+      "GRAV_PULSO",
+      "GRAV_CONV",
+      "GRAV_ENCH",
+      "GRAV_INSUF",
+      "GRAV_TAQUI",
+      "GRAV_EXTRE",
+      "GRAV_HIPOT",
+      "GRAV_HEMAT",
+      "GRAV_MELEN",
+      "GRAV_METRO",
+      "GRAV_SANG",
+      "GRAV_AST",
+      "GRAV_MIOC",
+      "GRAV_CONSC",
+      "GRAV_ORGAO"
+    ],
+    "hemorrhagic_manifestations": [
+      "EPISTAXE",
+      "GENGIVO",
+      "METRO",
+      "PETEQUIAS",
+      "HEMATURA",
+      "SANGRAM",
+      "LACO_N"
+    ],
+    "date_fields": [
+      "DT_NOTIFIC",
+      "DT_SIN_PRI",
+      "DT_INVEST",
+      "DT_CHIK_S1",
+      "DT_CHIK_S2",
+      "DT_PRNT",
+      "DT_SORO",
+      "DT_NS1",
+      "DT_VIRAL",
+      "DT_PCR",
+      "DT_INTERNA",
+      "DT_OBITO",
+      "DT_ENCERRA",
+      "DT_ALRM",
+      "DT_GRAV",
+      "DT_DIGITA"
+    ],
+    "auto_filled_fields": [
+      "SEM_NOT",
+      "NU_ANO",
+      "ID_REGIONA",
+      "SEM_PRI",
+      "ID_RG_RESI",
+      "TP_SISTEMA",
+      "DT_DIGITA"
+    ],
+    "internal_fields": [
+      "FLXRECEBI",
+      "MIGRADO_W",
+      "NDUPLIC_N",
+      "CS_FLXRET"
+    ]
+  },
+  "validation_rules": {
+    "date_validations": {
+      "DT_NOTIFIC": "Data de referência para outras validações",
+      "DT_SIN_PRI": "Deve ser <= DT_NOTIFIC",
+      "DT_INVEST": "Deve ser >= DT_NOTIFIC",
+      "DT_OBITO": "Deve ser >= DT_SIN_PRI",
+      "laboratory_dates": "Devem ser >= DT_SIN_PRI"
+    },
+    "conditional_requirements": {
+      "HOSPITALIZ": "Se = 1, habilita DT_INTERNA, UF, MUNICIPIO",
+      "EVOLUCAO": "Se = óbito, requer DT_OBITO",
+      "CLASSI_FIN": "Se = confirmado, requer campos de autoctonia",
+      "SOROTIPO": "Obrigatório se isolamento viral ou RT-PCR positivo"
+    },
+    "age_validations": {
+      "CS_ESCOL_N": "Preenchido com 10 se idade < 7 anos",
+      "CS_GESTANT": "Preenchido com 6 se sexo = M ou idade <= 10 anos"
+    }
+  },
+  "notes": {
+    "epidemiological_week": "Formato AAAASS onde AAAA = ano e SS = semana",
+    "age_format": "Primeiro dígito indica unidade (1=hora, 2=dia, 3=mês, 4=ano)",
+    "missing_values": "Campos vazios ou NA indicam informação não preenchida",
+    "classification_hierarchy": "Dengue (10) < Dengue com Sinais de Alarme (11) < Dengue Grave (12)"
+  }
+}

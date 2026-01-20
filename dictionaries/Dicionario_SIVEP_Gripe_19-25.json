@@ -1,0 +1,3974 @@
+{
+  "metadata": {
+    "description": "Estrutura de dados do SIVEP Gripe - Sistema de Informação da Vigilância Epidemiológica da Gripe",
+    "source": "Ministério da Saúde - SVS"
+  },
+  "allowed_variables": [
+    "NU_NOTIFIC",
+    "DT_NOTIFIC",
+    "SEM_NOT",
+    "DT_SIN_PRI",
+    "SEM_PRI",
+    "SG_UF_NOT",
+    "ID_REGIONA",
+    "CO_REGIONA",
+    "ID_MUNICIP",
+    "CO_MUN_NOT",
+    "CS_SEXO",
+    "DT_NASC",
+    "NU_IDADE_N",
+    "TP_IDADE",
+    "COD_IDADE",
+    "CS_GESTANT",
+    "CS_RACA",
+    "CS_ETINIA",
+    "CS_ESCOL_N",
+    "ID_PAIS",
+    "CO_PAIS",
+    "SG_UF",
+    "ID_RG_RESI",
+    "CO_RG_RESI",
+    "ID_MN_RESI",
+    "CO_MUN_RES",
+    "CS_ZONA",
+    "NOSOCOMIAL",
+    "AVE_SUINO",
+    "FEBRE",
+    "TOSSE",
+    "GARGANTA",
+    "DISPNEIA",
+    "DESC_RESP",
+    "SATURACAO",
+    "DIARREIA",
+    "VOMITO",
+    "OUTRO_SIN",
+    "OUTRO_DES",
+    "FATOR_RISC",
+    "PUERPERA",
+    "CARDIOPATI",
+    "HEMATOLOGI",
+    "SIND_DOWN",
+    "HEPATICA",
+    "ASMA",
+    "DIABETES",
+    "NEUROLOGIC",
+    "PNEUMOPATI",
+    "IMUNODEPRE",
+    "RENAL",
+    "OBESIDADE",
+    "OBES_IMC",
+    "OUT_MORBI",
+    "MORB_DESC",
+    "TABAG",
+    "VACINA",
+    "DT_UT_DOSE",
+    "MAE_VAC",
+    "DT_VAC_MAE",
+    "M_AMAMENTA",
+    "DT_DOSEUNI",
+    "DT_1_DOSE",
+    "DT_2_DOSE",
+    "ANTIVIRAL",
+    "TP_ANTIVIR",
+    "OUT_ANTIV",
+    "DT_ANTIVIR",
+    "HOSPITAL",
+    "DT_INTERNA",
+    "SG_UF_INTE",
+    "ID_RG_INTE",
+    "CO_RG_INTE",
+    "ID_MN_INTE",
+    "CO_MU_INTE",
+    "NM_UN_INTE",
+    "UTI",
+    "DT_ENTUTI",
+    "DT_SAIDUTI",
+    "SUPORT_VEN",
+    "RAIOX_RES",
+    "RAIOX_OUT",
+    "DT_RAIOX",
+    "AMOSTRA",
+    "DT_COLETA",
+    "TP_AMOSTRA",
+    "OUT_AMOST",
+    "PCR_RESUL",
+    "DT_PCR",
+    "POS_PCRFLU",
+    "TP_FLU_PCR",
+    "PCR_FLUASU",
+    "FLUASU_OUT",
+    "PCR_FLUBLI",
+    "FLUBLI_OUT",
+    "POS_PCROUT",
+    "PCR_VSR",
+    "PCR_PARA1",
+    "PCR_PARA2",
+    "PCR_PARA3",
+    "PCR_PARA4",
+    "PCR_ADENO",
+    "PCR_METAP",
+    "PCR_BOCA",
+    "PCR_RINO",
+    "PCR_OUTRO",
+    "DS_PCR_OUT",
+    "CLASSI_FIN",
+    "CLASSI_OUT",
+    "CRITERIO",
+    "EVOLUCAO",
+    "DT_EVOLUCA",
+    "DT_ENCERRA",
+    "DT_DIGITA",
+    "HISTO_VGM",
+    "PAIS_VGM",
+    "CO_PS_VGM",
+    "LO_PS_VGM",
+    "DT_VGM",
+    "DT_RT_VGM",
+    "PCR_SARS2",
+    "PAC_COCBO",
+    "PAC_DSCBO",
+    "OUT_ANIM",
+    "DOR_ABD",
+    "FADIGA",
+    "PERD_OLFT",
+    "PERD_PALA",
+    "TOMO_RES",
+    "TOMO_OUT",
+    "DT_TOMO",
+    "TP_TES_AN",
+    "DT_RES_AN",
+    "RES_AN",
+    "POS_AN_FLU",
+    "TP_FLU_AN",
+    "POS_AN_OUT",
+    "AN_SARS2",
+    "AN_VSR",
+    "AN_PARA1",
+    "AN_PARA2",
+    "AN_PARA3",
+    "AN_ADENO",
+    "AN_OUTRO",
+    "DS_AN_OUT",
+    "TP_AM_SOR",
+    "SOR_OUT",
+    "DT_CO_SOR",
+    "TP_SOR",
+    "OUT_SOR",
+    "DT_RES",
+    "RES_IGG",
+    "RES_IGM",
+    "RES_IGA",
+    "POV_CT",
+    "TP_POV_CT",
+    "TEM_CPF",
+    "ESTRANG",
+    "VACINA_COV",
+    "DOSE_1_COV",
+    "DOSE_2_COV",
+    "DOSE_REF",
+    "DOSE_2REF",
+    "DOSE_ADIC",
+    "DOS_RE_BI",
+    "FAB_COV_1",
+    "FAB_COV_2",
+    "FAB_COVRF",
+    "FAB_COVRF2",
+    "FAB_ADIC",
+    "FAB_RE_BI",
+    "LOTE_1_COV",
+    "LOTE_2_COV",
+    "LOTE_REF",
+    "LOTE_REF2",
+    "LOTE_ADIC",
+    "LOT_RE_BI",
+    "FNT_IN_COV",
+    "TRAT_COV",
+    "TIPO_TRAT",
+    "DT_TRT_COV",
+    "OUT_TRAT",
+    "SURTO_SG",
+    "CO_DETEC",
+    "VG_OMS",
+    "VG_OMSOUT",
+    "VG_LIN",
+    "VG_MET",
+    "VG_METOUT",
+    "VG_DTRES",
+    "VG_ENC",
+    "VG_REINF",
+    "VG_CODEST",
+    "REINF"
+  ],
+  "agents": [
+    {
+      "name": "Influenza A",
+      "pcr_condition": "(POS_PCRFLU == 1 && TP_FLU_PCR == 1) || PCR_FLUASU %in% c(1,2,3,4)",
+      "antigen_condition": "POS_AN_FLU == 1 && TP_FLU_AN == 1",
+      "fields_referenced": [
+        "POS_PCRFLU",
+        "TP_FLU_PCR",
+        "PCR_FLUASU",
+        "POS_AN_FLU",
+        "TP_FLU_AN"
+      ],
+      "classi_fin_values": [
+        1
+      ]
+    },
+    {
+      "name": "Influenza B",
+      "pcr_condition": "(POS_PCRFLU == 1 && TP_FLU_PCR == 2) || !is.na(PCR_FLUBLI)",
+      "antigen_condition": "POS_AN_FLU == 1 && TP_FLU_AN == 2",
+      "fields_referenced": [
+        "POS_PCRFLU",
+        "TP_FLU_PCR",
+        "PCR_FLUBLI",
+        "POS_AN_FLU",
+        "TP_FLU_AN"
+      ],
+      "classi_fin_values": [
+        1
+      ]
+    },
+    {
+      "name": "SARS-CoV-2",
+      "pcr_condition": "PCR_SARS2 == 1",
+      "antigen_condition": "AN_SARS2 == 1",
+      "fields_referenced": [
+        "PCR_SARS2",
+        "AN_SARS2"
+      ],
+      "classi_fin_values": [
+        5
+      ]
+    },
+    {
+      "name": "VSR",
+      "pcr_condition": "PCR_VSR == 1",
+      "antigen_condition": "AN_VSR == 1",
+      "fields_referenced": [
+        "PCR_VSR",
+        "AN_VSR"
+      ],
+      "classi_fin_values": [
+        2
+      ]
+    },
+    {
+      "name": "Parainfluenza 1",
+      "pcr_condition": "PCR_PARA1 == 1",
+      "antigen_condition": "AN_PARA1 == 1",
+      "fields_referenced": [
+        "PCR_PARA1",
+        "AN_PARA1"
+      ],
+      "classi_fin_values": [
+        2
+      ]
+    },
+    {
+      "name": "Parainfluenza 2",
+      "pcr_condition": "PCR_PARA2 == 1",
+      "antigen_condition": "AN_PARA2 == 1",
+      "fields_referenced": [
+        "PCR_PARA2",
+        "AN_PARA2"
+      ],
+      "classi_fin_values": [
+        2
+      ]
+    },
+    {
+      "name": "Parainfluenza 3",
+      "pcr_condition": "PCR_PARA3 == 1",
+      "antigen_condition": "AN_PARA3 == 1",
+      "fields_referenced": [
+        "PCR_PARA3",
+        "AN_PARA3"
+      ],
+      "classi_fin_values": [
+        2
+      ]
+    },
+    {
+      "name": "Parainfluenza 4",
+      "pcr_condition": "PCR_PARA4 == 1",
+      "antigen_condition": null,
+      "fields_referenced": [
+        "PCR_PARA4"
+      ],
+      "classi_fin_values": [
+        2
+      ]
+    },
+    {
+      "name": "Adenovírus",
+      "pcr_condition": "PCR_ADENO == 1",
+      "antigen_condition": "AN_ADENO == 1",
+      "fields_referenced": [
+        "PCR_ADENO",
+        "AN_ADENO"
+      ],
+      "classi_fin_values": [
+        2
+      ]
+    },
+    {
+      "name": "Metapneumovírus",
+      "pcr_condition": "PCR_METAP == 1",
+      "antigen_condition": null,
+      "fields_referenced": [
+        "PCR_METAP"
+      ],
+      "classi_fin_values": [
+        2
+      ]
+    },
+    {
+      "name": "Bocavírus",
+      "pcr_condition": "PCR_BOCA == 1",
+      "antigen_condition": null,
+      "fields_referenced": [
+        "PCR_BOCA"
+      ],
+      "classi_fin_values": [
+        2
+      ]
+    },
+    {
+      "name": "Rinovírus",
+      "pcr_condition": "PCR_RINO == 1",
+      "antigen_condition": null,
+      "fields_referenced": [
+        "PCR_RINO"
+      ],
+      "classi_fin_values": [
+        2
+      ]
+    },
+    {
+      "name": "Outros (PCR)",
+      "pcr_condition": "PCR_OUTRO == 1",
+      "antigen_condition": null,
+      "fields_referenced": [
+        "PCR_OUTRO",
+        "DS_PCR_OUT"
+      ],
+      "classi_fin_values": [
+        2,
+        3
+      ]
+    },
+    {
+      "name": "Outros (Antígeno)",
+      "pcr_condition": null,
+      "antigen_condition": "AN_OUTRO == 1",
+      "fields_referenced": [
+        "AN_OUTRO",
+        "DS_AN_OUT"
+      ],
+      "classi_fin_values": [
+        2,
+        3
+      ]
+    }
+  ],
+  "variables": {
+    "NU_NOTIFIC": {
+      "name": "Nº de notificação",
+      "description": "Número do registro. Campo Interno. Número sequencial gerado automaticamente pelo sistema.",
+      "data_type": "character",
+      "field_type": "char(12)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_NOTIFIC": {
+      "name": "Data de preenchimento da ficha de notificação",
+      "description": "Data de preenchimento da ficha de notificação. Campo Obrigatório. Data deve ser <= a data da digitação.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "SEM_NOT": {
+      "name": "Semana Epidemiológica do preenchimento da ficha de notificação",
+      "description": "Semana Epidemiológica do preenchimento da ficha de notificação. Campo Interno. Calculado a partir da data dos Primeiros Sintomas.",
+      "data_type": "character",
+      "field_type": "char(6)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_SIN_PRI": {
+      "name": "Data de 1ºs sintomas",
+      "description": "Data de 1ºs sintomas do caso. Campo Obrigatório. Data deve ser <= a data da digitação e <= a data de preenchimento da ficha de notificação.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "SEM_PRI": {
+      "name": "Semana Epidemiológica do início dos primeiros sintomas",
+      "description": "Semana Epidemiológica do início dos sintomas. Campo Interno. Calculado a partir da data dos Primeiros Sintomas.",
+      "data_type": "character",
+      "field_type": "char(6)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "SG_UF_NOT": {
+      "name": "UF",
+      "description": "Unidade Federativa onde está localizada a Unidade que realizou a notificação. Campo Obrigatório.",
+      "data_type": "character",
+      "field_type": "char(6)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ID_MUNICIP": {
+      "name": "Nome do município de notificação",
+      "description": "Município onde está localizada a Unidade que realizou a notificação. Campo Obrigatório.",
+      "data_type": "character",
+      "field_type": "char(6)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CO_MUN_NOT": {
+      "name": "Código IBGE do município de notificação",
+      "description": "Código IBGE do município de notificação. Município onde está localizada a Unidade que realizou a notificação. Campo Obrigatório.",
+      "data_type": "character",
+      "field_type": "char(6)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ID_REGIONA": {
+      "name": "Regional de Saúde onde está localizado o município de notificação",
+      "description": "Regional de Saúde onde está localizado o município que realizou a notificação. Campo Interno.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CO_REGIONA": {
+      "name": "Código IBGE da Regional de Saúde de notificação",
+      "description": "Código IBGE da Regional de Saúde de notificação. Campo Interno.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "TEM_CPF": {
+      "name": "Tem CPF?",
+      "description": "Informar se o paciente notificado dispõe do Número de Cadastro de Pessoa Física (CPF). Campo Obrigatório.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ESTRANG": {
+      "name": "Estrangeiro",
+      "description": "Informar se o paciente é estrangeiro. Campo Obrigatório.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CS_SEXO": {
+      "name": "Sexo",
+      "description": "Sexo do paciente. Campo Obrigatório.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "M": "Masculino",
+        "F": "Feminino",
+        "I": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_NASC": {
+      "name": "Data de nascimento",
+      "description": "Data de nascimento do paciente. Campo Essencial. Data deve ser <= data dos primeiros sintomas",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "NU_IDADE_N": {
+      "llm_hint": {
+        "paired_with": "TP_IDADE",
+        "usage": "NU_IDADE_N sem TP_IDADE é inválido para cálculos, é preciso converter usando as duas variáveis; usar AGE_YEARS derivado se disponível.",
+        "preferred_for_age_calc": true,
+        "trust_level": "primary"
+      },
+      "name": "Idade - Valor em dias, meses ou anos da idade.",
+      "description": "Deve ser interpretada junto com TP_IDADE. Valor em dias, meses ou anos da idade informada pelo paciente quando não se sabe a data de nascimento.",
+      "data_type": "integer",
+      "field_type": "int()",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "TP_IDADE": {
+      "llm_hint": {
+        "paired_with": "NU_IDADE_N",
+        "interpretation_rule": "usar TP_IDADE para converter NU_IDADE_N para anos",
+        "trust_level": "primary"
+      },
+      "name": "Tipo da idade",
+      "description": "Tipo da idade informada (1=Dia, 2=Mês, 3=Ano). Deve ser usado junto com NU_IDADE_N.",
+      "data_type": "integer",
+      "field_type": "int()",
+      "values": {
+        "1": "Dia",
+        "2": "Mês",
+        "3": "Ano"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "COD_IDADE": {
+      "name": "Idade Codificada",
+      "description": "Idade do paciente na data dos primeiros sintomas, codificada com o tipo de idade (dias, meses ou anos). União de TP_IDADE com NU_IDADE_N.",
+      "data_type": "integer",
+      "field_type": "num(4)",
+      "format": {
+        "structure": "1º dígito = unidade de tempo + 3 dígitos = valor",
+        "units": {
+          "1": "Dia",
+          "2": "Mês",
+          "3": "Ano"
+        },
+        "examples": {
+          "3009": "9 anos",
+          "1018": "18 dias"
+        }
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CS_GESTANT": {
+      "name": "Gestante",
+      "description": "Gestante: idade gestacional da paciente (em caso de paciente do sexo feminino em idade fértil). Campo obrigatório.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "1º Trimestre",
+        "2": "2º Trimestre",
+        "3": "3º Trimestre",
+        "4": "Idade gestacional ignorada",
+        "5": "Não",
+        "6": "Não se aplica",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CS_RACA": {
+      "name": "Raça/Cor",
+      "description": "Cor ou raça declarada pelo paciente. Campo Obrigatório.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Branca",
+        "2": "Preta",
+        "3": "Amarela",
+        "4": "Parda",
+        "5": "Indígena",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CS_ETINIA": {
+      "name": "Se indígena, qual etnia?",
+      "description": "Nome e código da etnia do paciente (quando indígena). Campo essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CS_ESCOL_N": {
+      "name": "Escolaridade",
+      "description": "Nível de escolaridade do paciente. Campo Essencial. Preenchido automaticamente como 'Não se aplica' se idade < 7 anos. Se idade >= 7 anos, não pode ser 'Não se aplica'.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "0": "Sem escolaridade/Analfabeto",
+        "1": "Fundamental 1º ciclo (1ª a 5ª série)",
+        "2": "Fundamental 2º ciclo (6ª a 9ª série)",
+        "3": "Médio (1º ao 3º ano)",
+        "4": "Superior",
+        "5": "Não se aplica",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PAC_COCBO": {
+      "name": "Ocupação do paciente - Código",
+      "description": "Código CBO da ocupação profissional do paciente. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PAC_DSCBO": {
+      "name": "Ocupação do paciente - Descrição",
+      "description": "Descrição da ocupação profissional do paciente. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "SG_UF": {
+      "name": "UF",
+      "description": "Unidade Federativa de residência do paciente. Campo Obrigatório.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CS_ZONA": {
+      "name": "Zona geográfica",
+      "description": "Zona geográfica do endereço de residência do paciente. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Urbana",
+        "2": "Rural",
+        "3": "Periurbana",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "HISTO_VGM": {
+      "name": "Histórico de viagem internacional nos últimos 14 dias",
+      "description": "Paciente tem histórico de viagem internacional até 14 dias antes do início dos sintomas?. Campo Obrigatório.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PAIS_VGM": {
+      "name": "País onde foi realizada a viagem internacional",
+      "description": "País onde foi realizada a viagem internacional. Campo Obrigatório. Preenchido se 'HISTO_VGM - Histórico de viagem internacional' = '1 - Sim'",
+      "data_type": "character",
+      "field_type": "char(30)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CO_PS_VGM": {
+      "name": "Código do país onde foi realizada a viagem internacional",
+      "description": "Código do país onde foi realizada a viagem internacional. Campo Obrigatório. Preenchido se 'HISTO_VGM - Histórico de viagem internacional' = '1 - Sim'",
+      "data_type": "character",
+      "field_type": "char(3)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "LO_PS_VGM": {
+      "name": "Local (Cidade, estado, província e outros) onde foi realizada a viagem internacional",
+      "description": "Local (Cidade, estado, província e outros) onde foi realizada a viagem internacional. Campo Essencial. Preenchido se 'HISTO_VGM - Histórico de viagem internacional' = '1 - Sim'",
+      "data_type": "character",
+      "field_type": "char(30)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_VGM": {
+      "name": "Data da viagem internacional",
+      "description": "Data em que foi realizada a viagem internacional. Campo Obrigatório. Preenchido se 'HISTO_VGM - Histórico de viagem internacional' = '1 - Sim'.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_RT_VGM": {
+      "name": "Data de retorno da viagem internacional",
+      "description": "Data em que retornou da viagem internacional. Campo Obrigatório. Preenchido se 'HISTO_VGM - Histórico de viagem internacional' = '1 - Sim'.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "NOSOCOMIAL": {
+      "name": "Trata-se de caso nosocomial (infecção adquirida no hospital)?",
+      "description": "Trata-se de caso nosocomial (infecção adquirida no hospital)? Caso de SRAG com infecção adquirida após internação. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ID_PAIS": {
+      "name": "País de residência (Se residente fora do Brasil)",
+      "description": "País de residência do paciente (Se residente fora do país). Campo Obrigatório.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CO_PAIS": {
+      "name": "Código do país de residência (Se residente fora do Brasil)",
+      "description": "Código do país de residência do paciente. (Se residente fora do Brasil). Campo Obrigatório",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ID_RG_RESI": {
+      "name": "Regional de Saúde de residência",
+      "description": "Regional de Saúde onde está localizado o município de residência do paciente.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CO_RG_RESI": {
+      "name": "Código IBGE da Regional de Saúde de residência",
+      "description": "Código IBGE da Regional de Saúde onde está localizado o município de residência do paciente.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ID_MN_RESI": {
+      "name": "Município de residência",
+      "description": "Município de residência do paciente.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CO_MUN_RES": {
+      "name": "Código IBGE do município de residência do paciente",
+      "description": "Código IBGE do município de residência do paciente.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "POV_CT": {
+      "name": "É membro de povo ou comunidade tradicional?",
+      "description": "Informar se paciente for membro de povo ou comunidade tradicional? Campo Obrigatório.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "TP_POV_CT": {
+      "name": "Povo ou comunidade tradicional (se o paciente for membro de povo/comunidade tradicional, informar qual)",
+      "description": "Povo ou comunidade tradicional (se o paciente for membro de povo/comunidade tradicional, informar qual). Campo Obrigatório.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "AVE_SUINO": {
+      "name": "Paciente trabalha ou tem contato direto com aves, suínos ou outro animal?",
+      "description": "Paciente trabalha ou tem contato direto com aves, suínos ou outro animal? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim, aves e/ou suínos",
+        "2": "Não, nenhum",
+        "3": "Sim, outros (Qual)",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "OUT_ANIM": {
+      "name": "Paciente teve contato direto ou trabalha com outro animal (Descrever)",
+      "description": "Descrição de outro animal com quem teve contato direto ou trabalha. Campo Essencial. Habilitado se respondeu '3 (Outro)' no campo de contato com animais.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "FEBRE": {
+      "name": "Sinais e Sintomas: Febre",
+      "description": "Paciente apresentou Febre? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "TOSSE": {
+      "name": "Sinais e Sintomas: Tosse",
+      "description": "Paciente apresentou Tosse? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "GARGANTA": {
+      "name": "Sinais e Sintomas: Dor de garganta",
+      "description": "Paciente apresentou Dor de garganta? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DISPNEIA": {
+      "name": "Sinais e Sintomas: Dispneia",
+      "description": "Paciente apresentou Dispneia? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DESC_RESP": {
+      "name": "Sinais e Sintomas: Desconforto respiratório",
+      "description": "Paciente apresentou Desconforto respiratório? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "SATURACAO": {
+      "name": "Sinais e Sintomas: Saturação O2 < 95%",
+      "description": "Paciente apresentou Saturação O2 < 95%? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DIARREIA": {
+      "name": "Sinais e Sintomas: Diarreia",
+      "description": "Paciente apresentou Diarreia? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "VOMITO": {
+      "name": "Sinais e Sintomas: Vômito",
+      "description": "Paciente apresentou Vômito? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DOR_ABD": {
+      "name": "Sinais e Sintomas: Dor abdominal",
+      "description": "Paciente apresentou Dor abdominal? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "FADIGA": {
+      "name": "Sinais e Sintomas: Fadiga",
+      "description": "Paciente apresentou Fadiga? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PERD_OLFT": {
+      "name": "Sinais e Sintomas: Perda do olfato",
+      "description": "Paciente apresentou Perda do olfato? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PERD_PALA": {
+      "name": "Sinais e Sintomas: Perda do paladar",
+      "description": "Paciente apresentou Perda do paladar? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "OUTRO_SIN": {
+      "name": "Sinais e Sintomas: Outros sintomas",
+      "description": "Paciente apresentou outros sintomas? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "OUTRO_DES": {
+      "name": "Sinais e Sintomas: Descrição de outros sintomas",
+      "description": "Listar outros sinais e sintomas apresentados pelo paciente. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "FATOR_RISC": {
+      "name": "Fatores de risco",
+      "description": "Paciente apresenta algum fator de risco?",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PUERPERA": {
+      "name": "Fator de risco: Puérpera",
+      "description": "Pacinete é Puérpera ou Parturiente? (Mulher que pariu recentemente - Até 45 dias do parto). Campo Essencial. Habilitado se Sexo = Feminino.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CARDIOPATI": {
+      "name": "Fator de risco: Doença cardiovascular crônica",
+      "description": "Paciente possui Doença cardiovascular crônica? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "HEMATOLOGI": {
+      "name": "Fator de risco: Doença hematológica crônica",
+      "description": "Paciente possui Doença hematológica crônica? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "SIND_DOWN": {
+      "name": "Fator de risco: Síndrome de Down",
+      "description": "Paciente possui Síndrome de Down? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "HEPATICA": {
+      "name": "Fator de risco: Doença hepática crônica (o paciente tem doença crônica do fígado?)",
+      "description": "Paciente possui Doença hepática crônica? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ASMA": {
+      "name": "Fator de risco: Asma",
+      "description": "Paciente possui Asma? Campo essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DIABETES": {
+      "name": "Fator de risco: Diabetes mellitus",
+      "description": "Paciente possui Diabetes mellitus? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "NEUROLOGIC": {
+      "name": "Fator de risco: Doença neurológica crônica",
+      "description": "Paciente possui Doença neurológica crônica? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PNEUMOPATI": {
+      "name": "Fator de risco: Pneumopatia crônica",
+      "description": "Paciente possui outra Pneumopatia crônica? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "IMUNODEPRE": {
+      "name": "Fator de risco: Imunodeficiência ou Imunodepressão",
+      "description": "Paciente possui Imunodeficiência ou Imunodepressão (Diminuição da função do sistema imunológico)? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "RENAL": {
+      "name": "Fator de risco: Doença renal crônica",
+      "description": "Paciente possui Doença renal crônica? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "OBESIDADE": {
+      "name": "Fator de risco: Obesidade",
+      "description": "Paciente possui Obesidade? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "OBES_IMC": {
+      "name": "Fator de risco: Obesidade (Descrição IMC)",
+      "description": "Valor do IMC (Índice de Massa Corporal). Habilitado se selecionado 1 no campo OBESIDADE. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "TABAG": {
+      "name": "Fator de risco: Tabagismo",
+      "description": "Paciente é tabagista? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "OUT_MORBI": {
+      "name": "Fator de risco: Outro(s) fator(es) de risco",
+      "description": "Paciente possui outro(s) fator(es) de risco? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "MORB_DESC": {
+      "name": "Descrição de outro(s) fator(es) de risco",
+      "description": "Descrição de outro(s) fator(es) de risco. Habilitado se selecionado 1 no campo OUT_MORBI (Outros fatores de risco). Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "VACINA_COV": {
+      "name": "Recebeu vacina contra COVID-19?",
+      "description": "Informar se o paciente recebeu vacina contra COVID-19, após verificar a documentação/caderneta. Campo Obrigatório. Integração com a Base Nacional de Vacinação",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DOSE_1_COV": {
+      "name": "Data da 1ª dose da vacina COVID-19",
+      "description": "Data em que o paciente recebeu a 1a dose da vacina COVID-19. Campo Essencial. Integração com a Base Nacional de Vacinação. Habilitado se campo 'Recebeu vacina COVID-19' for igual a 1.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DOSE_2_COV": {
+      "name": "Data da 2ª dose da vacina COVID-19",
+      "description": "Data em que o paciente recebeu a 2a dose da vacina COVID-19. Campo Essencial. Integração com a Base Nacional de Vacinação. Habilitado se campo 'Recebeu vacina COVID-19' for igual a 1.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DOSE_REF": {
+      "name": "Data da dose de reforço da vacina COVID-19",
+      "description": "Data em que o paciente recebeu a dose de reforço da vacina COVID-19. Campo Essencial. Integração com a Base Nacional de Vacinação. Habilitado se campo 'Recebeu vacina COVID-19' for igual a 1.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DOSE_2REF": {
+      "name": "Data da 2ª dose de reforço da vacina COVID-19",
+      "description": "Data em que o paciente recebeu a 2a dose de reforço da vacina COVID-19. Campo Essencial. Integração com a Base Nacional de Vacinação. Habilitado se campo 'Recebeu vacina COVID-19' for igual a 1.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DOSE_ADIC": {
+      "name": "Data da dose adicional da vacina COVID-19",
+      "description": "Data em que o paciente recebeu a dose adicional da vacina COVID-19. Campo Essencial. Integração com a Base Nacional de Vacinação. Habilitado se campo 'Recebeu vacina COVID-19' for igual a 1.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DOS_RE_BI": {
+      "name": "Data da dose reforço bivalente da vacina COVID-19",
+      "description": "Data em que o paciente recebeu a dose reforço bivalente da vacina COVID-19. Campo Essencial. Integração com a Base Nacional de Vacinação. Habilitado se campo 'Recebeu vacina COVID-19' for igual a 1.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "FAB_COV_1": {
+      "name": "Fabricante da 1ª dose da vacina da COVID-19",
+      "description": "Informar o fabricante da vacina da COVID-19 que o paciente recebeu na primeira dose. Campo Essencial. Integração com a Base Nacional de Vacinação. Habilitado se campo 'Recebeu vacina COVID-19' for igual a 1. Nomeada 'FAB_COV1' no dicionário, mas está como 'FAB_COV_1' nos bancos reais.",
+      "data_type": "character",
+      "field_type": "char(80)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "FAB_COV_2": {
+      "name": "Fabricante da 2ª dose da vacina da COVID-19",
+      "description": "Informar o fabricante da vacina da COVID-19 que o paciente recebeu na segunda dose. Campo Essencial. Integração com a Base Nacional de Vacinação. Habilitado se campo 'Recebeu vacina COVID-19' for igual a 1. Nomeada 'FAB_COV2' no dicionário, mas está como 'FAB_COV_2' nos bancos reais.",
+      "data_type": "character",
+      "field_type": "char(80)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "FAB_COVRF": {
+      "name": "Fabricante da dose de reforço da vacina da COVID-19",
+      "description": "Informar o fabricante da vacina da COVID-19 que o paciente recebeu na dose de reforço. Campo Essencial. Integração com a Base Nacional de Vacinação. Habilitado se campo 'Recebeu vacina COVID-19' for igual a 1.",
+      "data_type": "character",
+      "field_type": "char(80)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "FAB_COVRF2": {
+      "name": "Fabricante da 2ª dose de reforço da vacina da COVID-19",
+      "description": "Informar o fabricante da vacina da COVID-19 que o paciente recebeu na segunda dose de reforço. Campo Essencial. Integração com a Base Nacional de Vacinação. Habilitado se campo 'Recebeu vacina COVID-19' for igual a 1.",
+      "data_type": "character",
+      "field_type": "char(80)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "FAB_ADIC": {
+      "name": "Fabricante da dose adicional da vacina da COVID-19",
+      "description": "Informar o fabricante da vacina da COVID-19 que o paciente recebeu na dose adicional. Campo Essencial. Integração com a Base Nacional de Vacinação. Habilitado se campo 'Recebeu vacina COVID-19' for igual a 1.",
+      "data_type": "character",
+      "field_type": "char(80)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "FAB_RE_BI": {
+      "name": "Fabricante da dose de reforço bivalente da vacina da COVID-19",
+      "description": "Informar o fabricante da vacina da COVID-19 que o paciente recebeu na dose de reforço bivalente. Campo Essencial. Integração com a Base Nacional de Vacinação. Habilitado se campo 'Recebeu vacina COVID-19' for igual a 1.",
+      "data_type": "character",
+      "field_type": "char(80)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "LOTE_1_COV": {
+      "name": "Lote da 1ª dose da vacina da COVID-19",
+      "description": "Informar o lote da 1a dose da vacina da COVID-19 que o paciente recebeu. Campo Essencial. Integração com a Base Nacional de Vacinação. Habilitado se campo 'Recebeu vacina COVID-19' for igual a 1.",
+      "data_type": "character",
+      "field_type": "char(20)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "LOTE_2_COV": {
+      "name": "Lote da 2ª dose da vacina da COVID-19",
+      "description": "Informar o lote da 2a dose da vacina da COVID-19 que o paciente recebeu. Campo Essencial. Integração com a Base Nacional de Vacinação. Habilitado se campo 'Recebeu vacina COVID-19' for igual a 1.",
+      "data_type": "character",
+      "field_type": "char(20)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "LOTE_REF": {
+      "name": "Lote da dose de reforço da vacina da COVID-19",
+      "description": "Informar o lote da dose de reforço da vacina da COVID-19 que o paciente recebeu. Campo Essencial. Integração com a Base Nacional de Vacinação. Habilitado se campo 'Recebeu vacina COVID-19' for igual a 1.",
+      "data_type": "character",
+      "field_type": "char(20)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "LOTE_REF2": {
+      "name": "Lote da 2ª dose de reforço da vacina da COVID-19",
+      "description": "Informar o lote da segunda dose de reforço da vacina da COVID-19 que o paciente recebeu. Campo Essencial. Integração com a Base Nacional de Vacinação. Habilitado se campo 'Recebeu vacina COVID-19' for igual a 1.",
+      "data_type": "character",
+      "field_type": "char(20)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "LOTE_ADIC": {
+      "name": "Lote da dose adicional da vacina da COVID-19",
+      "description": "Informar o lote da dose adicional da vacina da COVID-19 que o paciente recebeu. Campo Essencial. Integração com a Base Nacional de Vacinação. Habilitado se campo 'Recebeu vacina COVID-19' for igual a 1.",
+      "data_type": "character",
+      "field_type": "char(20)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "LOT_RE_BI": {
+      "name": "Lote da dose de reforço bivalente da vacina da COVID-19",
+      "description": "Informar o lote da dose de reforço bivalente da vacina da COVID-19 que o paciente recebeu. Campo Essencial. Integração com a Base Nacional de Vacinação. Habilitado se campo 'Recebeu vacina COVID-19' for igual a 1.",
+      "data_type": "character",
+      "field_type": "char(20)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "FNT_IN_COV": {
+      "name": "Fonte dos dados/informação sobre a vacina COVID-19",
+      "description": "Campo preenchido de acordo com a fonte dos dados/informação sobre a vacina COVID-19, se foi digitada manualmente ou recuperada via integração com a Base Nacional de Vacinação. Campo Interno.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Manual",
+        "2": "Integração"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "VACINA": {
+      "name": "Recebeu vacina contra gripe na última campanha?",
+      "description": "Informar se o paciente foi vacinado contra gripe na última campanha, após verificar a documentação/caderneta. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_UT_DOSE": {
+      "name": "Data da vacinação contra gripe",
+      "description": "Data da última dose de vacina contra gripe que o paciente tomou. Campo Essencial. Habilitado se respondeu Sim para variável 'VACINA' - Recebeu vacina contra gripe. Data deve ser <= data da digitação.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "MAE_VAC": {
+      "name": "Se idade do paciente < 6 meses: a mãe recebeu a vacina contra gripe?",
+      "description": "Se idade do paciente < 6 meses: a mãe recebeu a vacina contra gripe? Campo Essencial. Habilitado se idade do paciente < 6 meses.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_VAC_MAE": {
+      "name": "Data que a mãe recebeu a vacina contra gripe",
+      "description": "Data que a mãe recebeu a vacina contra gripe. Campo Essencial. Habilitado se 'MAE_VAC' - mãe vacinada = Sim. Data deve ser <= data da digitação.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "M_AMAMENTA": {
+      "name": "Se idade do paciente < 6 meses: a mãe amamenta a criança?",
+      "description": "A mãe amamenta a criança? Habilitado se idade do paciente < 6 meses. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_DOSEUNI": {
+      "name": "Se idade do paciente >= 6 meses e <= 8 anos: Data da dose única.",
+      "description": "Data da dose única para crianças vacinadas em campanhas de anos anteriores. Campo Essencial. Habilitado se idade >= 6 meses e <= 8 anos.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_1_DOSE": {
+      "name": "Se idade do paciente >= 6 meses e <= 8 anos: Data da 1ª dose de vacina.",
+      "description": "Data da primeira dose de vacina (para crianças vacinadas pela primeira vez). Campo Essencial. Habilitado se idade >= 6 meses e <= 8 anos.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_2_DOSE": {
+      "name": "Se idade do paciente >= 6 meses e <= 8 anos: Data da 2ª dose de vacina",
+      "description": "Data da segunda dose de vacina (para crianças vacinadas pela primeira vez). Campo Essencial. Habilitado se idade >= 6 meses e <= 8 anos.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ANTIVIRAL": {
+      "name": "Usou antiviral para gripe?",
+      "description": "Paciente fez uso de antiviral para tratamento da doença gripe?. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "TP_ANTIVIR": {
+      "name": "Qual antiviral foi utilizado?",
+      "description": "Qual antiviral foi utilizado? Campo Essencial. Habilitado se usou 'ANTIVIRAL' - Antiviral = 1 - Sim.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Oseltamivir",
+        "2": "Zanamivir",
+        "3": "Outro, especifique"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "OUT_ANTIV": {
+      "name": "Qual antiviral - Outro",
+      "description": "Informar qual antiviral foi utilizado, se não foi Oseltamivir ou Zanamivir. Campo Essencial. Habilitado se 'TP_ANTIVIR' Qual Antiviral = '3 - Outro'.",
+      "data_type": "character",
+      "field_type": "char(30)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_ANTIVIR": {
+      "name": "Data do início do tratamento antiviral",
+      "description": "Data em que foi iniciado o tratamento com o antiviral. Campo Essencial. Habilitado se campo 'ANTIVIRAL - Usou antiviral para gripe' = '1 - Sim'. Data deve ser <= a data da digitação.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "TRAT_COV": {
+      "name": "Recebeu tratamento antiviral para covid-19?",
+      "description": "Fez uso de antiviral para tratamento de covid-19? Campo Essencial",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "TIPO_TRAT": {
+      "name": "Qual antiviral para covid-19?",
+      "description": "Se foi feito uso de antiviral para tratamento de covid-19, informar qual, conforme relação disponível. Habilitado se 'TRAT_COV - Recebeu tratamento antiviral para covid-19' : '1 - Sim'",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Nirmatrevir/ritonavir (Paxlovid)",
+        "2": "Molnupiravir (Lagevrio)",
+        "3": "Baricitinibe (Olumiant)",
+        "4": "Outro, especifique"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "OUT_TRAT": {
+      "name": "Qual antiviral para covid-19? Especificar outro",
+      "description": "Se o antiviral utilizado não foi listado anteriormente, informar qual. Campo Essencial. Habilitado se 'TIPO_TRAT - Qual antiviral para covid-19?' = '4 - outro'",
+      "data_type": "character",
+      "field_type": "char(30)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_TRT_COV": {
+      "name": "Data do início do tratamento antiviral de covid-19",
+      "description": "Data em que foi iniciado o tratamento com o antiviral para tratamento de covid-19. Campo Essencial. Habilitado se campo 'TRAT_COV - Usou antiviral para covid-19' = '1 - Sim'. Data deve ser <= a data da digitação.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "HOSPITAL": {
+      "name": "Houve internação?",
+      "description": "O paciente foi internado?. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_INTERNA": {
+      "name": "Data da internação por SRAG",
+      "description": "Data em que o paciente foi hospitalizado por SRAG. Campo Obrigatório. Data deve ser >= Data de 1ºs sintomas e <= data da digitação.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "SG_UF_INTE": {
+      "name": "UF de internação",
+      "description": "Unidade Federativa de internação do paciente). Campo Essencial. Habilitado se houve 'HOSPITAL - Internação' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ID_RG_INTE": {
+      "name": "Regional de Saúde de internação",
+      "description": "Regional de Saúde onde está localizado o município de internação do paciente. Campo Interno.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CO_RG_INTE": {
+      "name": "Código IBGE da Regional de Saúde de internação do paciente",
+      "description": "Código IBGE da Regional de Saúde onde está localizado o município de internação do paciente. Campo Interno.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ID_MN_INTE": {
+      "name": "Município de internação",
+      "description": "Município onde está localizada a Unidade de Saúde onde o paciente internou. Campo Essencial. Habilitado se houve 'HOSPITAL - Internação' = '1 - Sim'",
+      "data_type": "character",
+      "field_type": "char(20)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CO_MU_INTE": {
+      "name": "Código IBGE do município de internação",
+      "description": "Código IBGE do município onde está localizada a Unidade de Saúde onde o paciente internou. Campo Essencial. Habilitado se houve 'HOSPITAL - Internação' = '1 - Sim'",
+      "data_type": "character",
+      "field_type": "char(20)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "NM_UN_INTE": {
+      "name": "Nome da Unidade de Saúde de internação",
+      "description": "Nome da Unidade de Saúde que realizou a internação do paciente. Campo Essencial. Habilitado se houve 'HOSPITAL - Internação' = '1 - Sim'",
+      "data_type": "character",
+      "field_type": "char(20)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "UTI": {
+      "name": "Internado em UTI?",
+      "description": "O paciente foi internado na Unidade de Terapia Intensiva (UTI)?. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_ENTUTI": {
+      "name": "Data da entrada na UTI",
+      "description": "Data de entrada do paciente na UTI. Campo Essencial. Habilitado se 'UTI - internado em UTI' = '1 - Sim'. Data deve ser >= Data de 1ºs sintomas e <= data da digitação.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_SAIDUTI": {
+      "name": "Data da saída da UTI",
+      "description": "data em que o paciente saiu da UTI. Campo Essencial. Habilitado se internado em 'UTI - internado em UTI' = '1 - Sim'. Data deve ser >= Data da entrada na UTI e <= data da digitação.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "SUPORT_VEN": {
+      "name": "Uso de suporte ventilatório?",
+      "description": "O paciente fez uso de suporte ventilatório?. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim, invasivo",
+        "2": "Sim, não invasivo",
+        "3": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "RAIOX_RES": {
+      "name": "Resultado do Raio X de tórax",
+      "description": "Informar resultado do exame de Raio X de tórax. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Normal",
+        "2": "Infiltrado intersticial",
+        "3": "Consolidação",
+        "4": "Misto",
+        "5": "Outro",
+        "6": "Não realizado",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "RAIOX_OUT": {
+      "name": "Resultado do Raio X de tórax - Especificar Outro",
+      "description": "Informar o resultado do Raio X de Tórax não especificado. Campo Essencial. Habilitado se resultado 'RAIOX_RES - Raio X' = '5 - Outro'.",
+      "data_type": "character",
+      "field_type": "char(30)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_RAIOX": {
+      "name": "Data de realização do Raio X",
+      "description": "Especificar a data do exame do Raio X. Campo Essencial. Habilitado se resultado 'RAIOX_RES - Raio X' = '1, 2, 3, 4 ou 5'.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "TOMO_RES": {
+      "name": "Aspecto da Tomografia",
+      "description": "Informar o Aspecto/Resultado da Tomografia. Campo Essencial.",
+      "data_type": "integer",
+      "field_type": "int(3)",
+      "values": {
+        "1": "Típico covid-19",
+        "2": "Indeterminado covid-19",
+        "3": "Atípico covid-19",
+        "4": "Negativo para Pneumonia",
+        "5": "Outro",
+        "6": "Não realizado",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "TOMO_OUT": {
+      "name": "Aspecto da Tomografia - Outro",
+      "description": "Informar o Aspecto/Resultado da Tomografia. Campo Essencial. Habilitado se 'TOMO_RES - Aspecto da Tomografia' = '5 - Outro'.",
+      "data_type": "character",
+      "field_type": "char(100)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_TOMO": {
+      "name": "Data da Tomografia",
+      "description": "Se realizou tomografia, especificar a  data do exame. Campo Essencial. Habilitado se 'TOMO_RES - Aspecto da Tomografia' = '1, 2, 3, 4 ou 5'.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "AMOSTRA": {
+      "name": "Coletou amostra para realização do teste diagnóstico?",
+      "description": "Foi realizada coleta de amostra para realização do teste diagnóstico?. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_COLETA": {
+      "name": "Data da coleta da amostra para realização do teste diagnóstico",
+      "description": "Data da coleta da amostra para realização do teste diagnóstico. Campo Essencial. Habilitado se 'AMOSTRA - Coletou amostra' = '1 - Sim'. Data deve  ser >= Data de 1ºs sintomas e <= data da digitação.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "TP_AMOSTRA": {
+      "name": "Tipo de amostra clínica coletada para o teste diagnóstico",
+      "description": "Tipo de amostra clínica coletada para o teste diagnóstico. Campo Essencial. Habilitado se 'AMOSTRA - Coletou amostra' = '1 - Sim'",
+      "data_type": "character",
+      "field_type": "char(30)",
+      "values": {
+        "1": "Secreção de Naso-orofaringe",
+        "2": "Lavado bronco-alveolar",
+        "3": "Tecido post-mortem",
+        "4": "Outra, qual?",
+        "5": "LCR",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "OUT_AMOST": {
+      "name": "Tipo de amostra clínica coletada para o teste diagnóstico - Especificação de Outra",
+      "description": "Descrição do tipo de amostra clínica caso diferente das listadas. Campo Essencial. Habilitado se 'TP_AMOSTRA - Tipo de amostra' = '4 - Outra'.",
+      "data_type": "character",
+      "field_type": "char(30)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "TP_TES_AN": {
+      "name": "Tipo do Teste Antigênico",
+      "description": "Tipo do Teste antigênico que foi realizado. Campo Essencial",
+      "data_type": "integer",
+      "field_type": "int(1)",
+      "values": {
+        "1": "Imunofluorescência (IF)",
+        "2": "Teste rápido antigênico"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_RES_AN": {
+      "name": "Data do resultado do Teste Antigênico",
+      "description": "Data do resultado do Teste Antigênico. Campo Essencial. Data deve ser >= a Data da Coleta.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "RES_AN": {
+      "name": "Resultado do Teste Antigênico",
+      "description": "Resultado do Teste Antigênico. Campo Essencial. Este campo vem preenchido como 'Aguardando Resultado' (categoria 5) e está  habilitado se 'AMOSTRA - Coletou amostra' = ' 1- Sim '.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Positivo",
+        "2": "Negativo",
+        "3": "Inconclusivo",
+        "4": "Não realizado",
+        "5": "Aguardando resultado",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "POS_AN_FLU": {
+      "name": "Teste Antigênico - Agente Etiológico: Positivo para Influenza?",
+      "description": "Resultado do teste antigênico que foi positivo para Influenza. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "TP_FLU_AN": {
+      "name": "Teste Antigênico - Agente Etiológico: Se positivo para Influenza, qual tipo  de Influenza?",
+      "description": "Teste Antigênico: Se positivo para Influenza, qual tipo  de Influenza (A ou B)? Campo Essencial. Habilitado se 'POS_AN_FLU - Positivo para Influenza'  = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Influenza A",
+        "2": "Influenza B"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "POS_AN_OUT": {
+      "name": "Teste Antigênico - Agente Etiológico: Positivo para outros vírus respiratórios?",
+      "description": "Resultado do teste antigênico Positivo para outros vírus respiratórios? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "AN_SARS2": {
+      "name": "Teste Antigênico - Agente Etiológico: SARS-CoV-2",
+      "description": "Resultado do teste antigênico para SARS-CoV-2. Campo Essencial. Habilitado se 'POS_AN_OUT - Antigênico Positivo para outros vírus' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Positivo"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "AN_VSR": {
+      "name": "Teste Antigênico - Agente Etiológico: VSR",
+      "description": "Resultado do teste antigênico para Vírus Sincicial Respiratório (VSR). Campo Essencial. Habilitado se 'POS_AN_OUT - Antigênico Positivo para outros vírus' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Positivo"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "AN_PARA1": {
+      "name": "Teste Antigênico - Agente Etiológico: Parainfluenza 1",
+      "description": "Resultado do teste antigênico para Parainfluenza 1. Campo Essencial. Habilitado se 'POS_AN_OUT - Antigênico Positivo para outros vírus' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Positivo"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "AN_PARA2": {
+      "name": "Teste Antigênico - Agente Etiológico: Parainfluenza 2",
+      "description": "Resultado do teste antigênico para Parainfluenza 2. Campo Essencial. Habilitado se 'POS_AN_OUT - Antigênico Positivo para outros vírus' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Positivo"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "AN_PARA3": {
+      "name": "Teste Antigênico - Agente Etiológico: Parainfluenza 3",
+      "description": "Resultado do teste antigênico para Parainfluenza 3. Campo Essencial. Habilitado se 'POS_AN_OUT - Antigênico Positivo para outros vírus' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Positivo"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "AN_ADENO": {
+      "name": "Teste Antigênico - Agente Etiológico: Adenovírus",
+      "description": "Resultado do teste antigênico para Adenovírus. Campo Essencial. Habilitado se 'POS_AN_OUT - Antigênico Positivo para outros vírus' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Positivo"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "AN_OUTRO": {
+      "name": "Teste Antigênico - Agente Etiológico: Outro vírus respiratório",
+      "description": "Resultado do teste antigênico para Outro vírus respiratório. Campo Essencial. Habilitado se 'POS_AN_OUT - Antigênico Positivo para outros vírus' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Positivo"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DS_AN_OUT": {
+      "name": "Teste Antigênico - Agente Etiológico: Descrição de outro vírus respiratório",
+      "description": "Nome/Descrição do outro vírus respiratório identificado pelo Teste Antigênico. Campo Essencial. Habilitado se 'POS_AN_OUT - Antigênico Positivo para outros vírus' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(30)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PCR_RESUL": {
+      "name": "Resultado da RT-PCR/outro método por Biologia Molecular",
+      "description": "Resultado do teste de RT-PCR/outro método por Biologia Molecular. Campo Essencial. Este campo vem preenchido como '5 - Aguardando Resultado' e está habilitado se 'AMOSTRA -  Coletou amostra?' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Detectável",
+        "2": "Não Detectável",
+        "3": "Inconclusivo",
+        "4": "Não realizado",
+        "5": "Aguardando resultado",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_PCR": {
+      "name": "Data do Resultado do RT-PCR/outro método por Biologia Molecular",
+      "description": "Data do Resultado do teste RT-PCR/outro método por Biologia Molecular. Campo Essencial. Habilitado se 'PCR_RESUL - Resultado da RT-PCR' = '1, 2 ou 3'. Data deve ser >= Data da Coleta.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "POS_PCRFLU": {
+      "name": "RT-PCR/outro método por Biologia Molecular - Agente Etiológico: Positivo para Influenza?",
+      "description": "Resultado do RT-PCR foi positivo para Influenza. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "TP_FLU_PCR": {
+      "name": "RT-PCR - Agente Etiológico: Se positivo para Influenza, qual tipo de Influenza?",
+      "description": "Resultado do diagnóstico do RT-PCR para o tipo de Influenza (A ou B). Campo Essencial. Habilitado se 'POS_PCRFLU - Positivo para Influenza' = '1 - Sim'",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Influenza A",
+        "2": "Influenza B"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PCR_FLUASU": {
+      "name": "RT-PCR - Agente Etiológico: Se Influenza A, qual subtipo?",
+      "description": "Subtipo para Influenza A. Campo Essencial. Habilitado se 'TP_FLU_PCR - Positivo para Influenza' = '1 - Influenza tipo A'.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Influenza A(H1N1)pdm09",
+        "2": "Influenza A(H3N2)",
+        "3": "Influenza A não subtipado",
+        "4": "Influenza A não subtipável",
+        "5": "Inconclusivo",
+        "6": "Outro, especifique"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "FLUASU_OUT": {
+      "name": "RT-PCR - Agente Etiológico: Se Influenza A, especificação de Outro",
+      "description": "Especificação/Descrição de Outro subtipo de Influenza A. Campo Essencial. Habilitado se 'PCR_FLUASU - Subtipo de Influenza A' = '6 - Outro'",
+      "data_type": "character",
+      "field_type": "char(30)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PCR_FLUBLI": {
+      "name": "RT-PCR - Agente Etiológico: Se Influenza B, qual linhagem?",
+      "description": "Linhagem para Influenza B. Campo Essencial. Habilitado se 'TP_FLU_PCR - Positivo para Influenza' = '2 - Influenza tipo B'.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Victoria",
+        "2": "Yamagata",
+        "3": "Não realizado",
+        "4": "Inconclusivo",
+        "5": "Outro, especifique"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "FLUBLI_OUT": {
+      "name": "RT-PCR - Agente Etiológico: Se Influenza B, especificação de Outro",
+      "description": "Especificação/Descrição de Outra linhagem de Influenza B. Campo Essencial. Habilitado se 'PCR_FLUBLI - Linhagem de Influenza B' = ' 5 - Outro'.",
+      "data_type": "character",
+      "field_type": "char(30)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "POS_PCROUT": {
+      "name": "RT-PCR/outro método por Biologia Molecular - Agente Etiológico: Positivo para outros vírus respiratórios?",
+      "description": "Resultado da RT-PCR foi positivo para outros vírus respiratórios? Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PCR_SARS2": {
+      "name": "RT-PCR/outro método por Biologia Molecular - Agente Etiológico: SARS-CoV-2",
+      "description": "Resultado diagnóstico do RT-PCR para SARS-CoV-2. Campo Essencial. Habilitado se 'POS_PCROUT - Positivo para outros vírus' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Positivo"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PCR_VSR": {
+      "name": "RT-PCR/outro método por Biologia Molecular - Agente Etiológico: VSR",
+      "description": "Resultado diagnóstico do RT-PCR para VSR. Campo Essencial. Habilitado se 'POS_PCROUT - Positivo para outros vírus' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Positivo"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PCR_PARA1": {
+      "name": "RT-PCR/outro método por Biologia Molecular - Agente Etiológico: Parainfluenza 1",
+      "description": "Resultado diagnóstico do RT-PCR para Parainfluenza 1. Campo Essencial. Habilitado se 'POS_PCROUT - Positivo para outros vírus' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Positivo"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PCR_PARA2": {
+      "name": "RT-PCR/outro método por Biologia Molecular - Agente Etiológico: Parainfluenza 2",
+      "description": "Resultado diagnóstico do RT-PCR para Parainfluenza 2. Campo Essencial. Habilitado se 'POS_PCROUT - Positivo para outros vírus' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Positivo"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PCR_PARA3": {
+      "name": "RT-PCR/outro método por Biologia Molecular - Agente Etiológico: Parainfluenza 3",
+      "description": "Resultado diagnóstico do RT-PCR para Parainfluenza 3 Campo Essencial. Habilitado se 'POS_PCROUT - Positivo para outros vírus' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Positivo"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PCR_PARA4": {
+      "name": "RT-PCR/outro método por Biologia Molecular - Agente Etiológico: Parainfluenza 4",
+      "description": "Resultado diagnóstico do RT-PCR para Parainfluenza 4. Campo Essencial. Habilitado se 'POS_PCROUT - Positivo para outros vírus' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Positivo"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PCR_ADENO": {
+      "name": "RT-PCR/outro método por Biologia Molecular - Agente Etiológico: Adenovírus",
+      "description": "Resultado diagnóstico do RT-PCR para Adenovírus. Campo Essencial. Habilitado se 'POS_PCROUT - Positivo para outros vírus' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Positivo"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PCR_METAP": {
+      "name": "RT-PCR/outro método por Biologia Molecular - Agente Etiológico: Metapneumovírus",
+      "description": "Resultado diagnóstico do RT-PCR para Metapneumovírus. Campo Essencial. Habilitado se 'POS_PCROUT - Positivo para outros vírus' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Positivo"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PCR_BOCA": {
+      "name": "RT-PCR/outro método por Biologia Molecular - Agente Etiológico: Bocavírus",
+      "description": "Resultado diagnóstico do RT-PCR para Bocavírus. Campo Essencial. Habilitado se 'POS_PCROUT - Positivo para outros vírus' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Positivo"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PCR_RINO": {
+      "name": "RT-PCR/outro método por Biologia Molecular - Agente Etiológico: Rinovírus",
+      "description": "Resultado diagnóstico do RT-PCR para Rinovírus. Campo Essencial. Habilitado se 'POS_PCROUT - Positivo para outros vírus' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Positivo"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "PCR_OUTRO": {
+      "name": "RT-PCR/outro método por Biologia Molecular - Agente Etiológico: Outro vírus respiratório",
+      "description": "Resultado diagnóstico do RT-PCR para outro vírus respiratório. Campo Essencial. Habilitado se 'POS_PCROUT - Positivo para outros vírus' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Positivo"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DS_PCR_OUT": {
+      "name": "RT-PCR - Agente Etiológico: Descrição de outro vírus respiratório",
+      "description": "Nome/Descrição do outro vírus respiratório identificado pelo RT-PCR. Campo Essencial. Habilitado se 'POS_PCROUT - Positivo para outros vírus' = '1 - Sim'.",
+      "data_type": "character",
+      "field_type": "char(30)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "TP_AM_SOR": {
+      "name": "Tipo de Amostra Sorológica para SARS-CoV-2",
+      "description": "Tipo de Amostra Sorológica para SARS-CoV-2 que foi coletada. Campo Essencial.",
+      "data_type": "integer",
+      "field_type": "int(1)",
+      "values": {
+        "1": "Sangue/plasma/soro",
+        "2": "Outra, qual?",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "SOR_OUT": {
+      "name": "Tipo de Amostra Sorológica para SARS-CoV-2 - Qual Outra",
+      "description": "Descrição do tipo da amostra clínica, caso diferente das listadas anteriormente. Campo Essencial. Habilitado se 'TP_AM_SOR - Tipo de Amostra Sorológica' = '2 - Outra'.",
+      "data_type": "character",
+      "field_type": "char(30)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_CO_SOR": {
+      "name": "Data da coleta da Amostra Sorológica",
+      "description": "Data da coleta do material para diagnóstico por Sorologia. Campo Essencial. Habilitado se 'AMOSTRA - Coletou  amostra' = '1 - Sim'. Data deve ser >= Data de 1ºs sintomas e <= data da  digitação.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "TP_SOR": {
+      "name": "Tipo de Sorologia para SARS-CoV-2",
+      "description": "Descrição do tipo do teste sorológico para SARS-CoV-2 que foi realizado.",
+      "data_type": "integer",
+      "field_type": "int(1)",
+      "values": {
+        "1": "Teste rápido",
+        "2": "Elisa",
+        "3": "Quimiluminescência",
+        "4": "Outro, qual"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "OUT_SOR": {
+      "name": "Tipo de Sorologia para SARS-CoV-2 - Descrição",
+      "description": "Descrição do tipo do teste sorológico para SARS-CoV-2 que foi realizado, se diferente dos listados. Campo Essencial. Habilitado se selecionado 'Outro, qual?' em 'TP_SOR - Tipo  de Sorologia' = ' 4 - Outro'.",
+      "data_type": "character",
+      "field_type": "char(100)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "RES_IGG": {
+      "name": "Resultado do Teste Sorológico para SARS-CoV-2: IgG",
+      "description": "Resultado da Sorologia para SARS-CoV-2: IgG. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Positivo",
+        "2": "Negativo",
+        "3": "Inconclusivo",
+        "4": "Não realizado",
+        "5": "Aguardando resultado",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "RES_IGM": {
+      "name": "Resultado do Teste Sorológico para SARS-CoV-2: IgM",
+      "description": "Resultado da Sorologia para SARS-CoV-2: IgM. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Positivo",
+        "2": "Negativo",
+        "3": "Inconclusivo",
+        "4": "Não realizado",
+        "5": "Aguardando resultado",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "RES_IGA": {
+      "name": "Resultado do Teste Sorológico para SARS-CoV-2: IgA",
+      "description": "Resultado do Teste Sorológico para SARS-CoV-2: IgA. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Positivo",
+        "2": "Negativo",
+        "3": "Inconclusivo",
+        "4": "Não realizado",
+        "5": "Aguardando resultado",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_RES": {
+      "name": "Data do resultado do Teste Sorológico",
+      "description": "Data do resultado do Teste Sorológico. Campo Essencial. Data deve ser >= Data da Coleta.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "SURTO_SG": {
+      "name": "Faz parte de uma cadeia de surto de SG?",
+      "description": "O caso faz parte de um surto de Síndrome Gripal. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CO_DETEC": {
+      "name": "É um caso de co-detecção?",
+      "description": "O caso trata-se de co-detecção, onde foram identificados dois tipos de vírus ao mesmo tempo. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CLASSI_FIN": {
+      "name": "Classificação final do caso",
+      "description": "Diagnóstico final do caso. Se tiver resultados divergentes entre as metodologias laboratoriais, priorizar o resultado do RT-PCR. Campo Obrigatório.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "SRAG por influenza",
+        "2": "SRAG por outro vírus respiratório",
+        "3": "SRAG por outro agente etiológico, qual:",
+        "4": "SRAG não especificado",
+        "5": "SRAG por covid-19"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CLASSI_OUT": {
+      "name": "Classificação final do caso - Outro agente etiológico",
+      "description": "Descrição do outro agente etiológico identificado, se 'CLASSI_FIN' - Classificação final = 3 - Outro agente etiológico. Campo Obrigatório.",
+      "data_type": "character",
+      "field_type": "char(30)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "CRITERIO": {
+      "name": "Critério de Encerramento",
+      "description": "Indica qual o critério de confirmação. Campo Essencial. OBS: Os critérios de encerramento 3 - Clínico e 4 - Clínico-Imagem não são mais considerados para SRAG por covid-19 desde 31/10/2022; E critério 4 - Clínico - Imagem não se aplica para SRAG por Influenza, por outros vírus respiratórios, por outro agente etiológico ou por SRAG não especificado.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Laboratorial",
+        "2": "Clínico Epidemiológico",
+        "3": "Clínico",
+        "4": "Clínico Imagem"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "EVOLUCAO": {
+      "name": "Evolução do caso",
+      "description": "Evolução do caso (desfecho). Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Cura",
+        "2": "Óbito",
+        "3": "Óbito por outras causas",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_EVOLUCA": {
+      "name": "Data da alta ou óbito",
+      "description": "Data da alta ou óbito. Campo Essencial. Habilitado se 'EVOLUCAO' - Evolução = 1 - Cura ou 2 - Óbito. Data deve ser >= Data dos 1ºs sintomas e <= data da digitação.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_ENCERRA": {
+      "name": "Data do Encerramento",
+      "description": "Data do Encerramento do caso. Campo Obrigatório. Preenchida quando 'CLASSI_FIN' - Classificação final está preenchida. Data do encerramento deve ser >= data do preenchimento e <= data da digitação.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "DT_DIGITA": {
+      "name": "Data da digitação",
+      "description": "Data de inclusão do registro no sistema. Campo Interno. Preenchido automaticamente com a data em que a ficha é digitada no sistema. Não é a data de preenchimento manual. Não é atualizada se houver alterações posteriores de dados.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "format": "YYYY-MM-DD",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "VG_OMS": {
+      "name": "Designação da variante (OMS)",
+      "description": "Designação da variante identificada de acordo com a Organização Mundial da Saúde. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Ômicron",
+        "2": "Delta",
+        "3": "Alfa",
+        "4": "Beta",
+        "5": "Gama",
+        "6": "Recombinante (ex.: XE, XF, XQ, XS...)",
+        "7": "Outra, especifique:"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "VG_OMSOUT": {
+      "name": "Designação da variante (OMS) - Outra",
+      "description": "Denominação de novas variantes que ainda não constam na relação disponível da OMS. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(30)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "VG_LIN": {
+      "name": "Linhagem da variante",
+      "description": "Especificação da linhagem da variante identificada no sequenciamento genômico. Campo Essencial. Obrigatório se 'VG_OMS' - Designação da variante (OMS) preenchida.",
+      "data_type": "character",
+      "field_type": "char(15)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "VG_MET": {
+      "name": "Método laboratorial mais recente",
+      "description": "Metodologia laboratorial realizada mais recentemente. Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Sequenciamento genômico completo",
+        "2": "Sequenciamento genômico parcial",
+        "3": "RT-PCR em tempo real de inferência",
+        "4": "Outro, especifique"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "VG_METOUT": {
+      "name": "Método laboratorial mais recente - Outro",
+      "description": "Especificação de outra metodologia laboratorial realizada mais recente. Habilitado se 'VG_MET' - Método laboratorial = 4 - Outro.",
+      "data_type": "character",
+      "field_type": "char(30)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "VG_DTRES": {
+      "name": "Data do resultado do sequenciamento genômico",
+      "description": "Data do resultado do sequenciamento genômico. Campo Essencial.",
+      "data_type": "date",
+      "field_type": "date(8)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "format": "YYYY-MM-DD"
+    },
+    "VG_ENC": {
+      "name": "Encerramento do caso (para VOC, VOI ou VUM)",
+      "description": "Encerramento do caso conforme orientações da NT 1.129/2021-CGPNI/DEIDT/SVS/MS. Campo Essencial. Obrigatório se 'VG_OMS' - Designação da variante preenchida.",
+      "data_type": "character",
+      "field_type": "char(1)",
+      "values": {
+        "1": "Confirmado por Sequenciamento genômico completo",
+        "2": "Provável por Sequenciamento genômico parcial",
+        "3": "Sugestivo por RT-PCR de inferência",
+        "4": "Sugestivo por vínculo epidemiológico",
+        "5": "Descartado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "VG_REINF": {
+      "name": "Possível caso de reinfecção por covid-19? (paciente com registro anterior positivo há >= 90 dias)",
+      "description": "Possível caso de reinfecção por covid-19? (paciente com registro anterior positivo há >= 90 dias). Campo Essencial.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "REINF": {
+      "name": "Possível caso de reinfecção por covid-19? (paciente com registro anterior positivo há >= 90 dias)",
+      "description": "Campo não existe no dicionário oficial, mas conta nos bancos. Possui a mesma funçâo que a variável VG_REINF, é necessário investigar as duas.",
+      "data_type": "character",
+      "field_type": "char(2)",
+      "values": {
+        "1": "Sim",
+        "2": "Não",
+        "9": "Ignorado"
+      },
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "VG_CODEST": {
+      "name": "Código (CNES) do Estabelecimento responsável pelo preenchimento",
+      "description": "Código (CNES) do Estabelecimento responsável pelo preenchimento. Campo Essencial. No dicionário oficial está listada como 'VG_CODDEST', mas no banco está 'VG_CODEST'",
+      "data_type": "character",
+      "field_type": "char(7)",
+      "anos_disponiveis": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    }
+  },
+  "notes": {
+    "missing_sensitive_fields": {
+      "description": "As variáveis listadas abaixo constam no dicionário oficial, mas não estão presentes nos bancos públicos. Provável motivo: contêm dados pessoais sensíveis e foram excluídas por política de anonimização.",
+      "fields": {
+        "ID_UNIDADE": "Unidade de Saúde que realizou a notificação (código CNES)",
+        "CO_UNI_NOT": "Código CNES da Unidade notificadora",
+        "ID_UN_INTE": "Unidade de internação do paciente",
+        "CO_UN_INTE": "Código CNES da unidade de internação",
+        "NU_CPF": "Número do CPF do paciente",
+        "NU_CNS": "Cartão Nacional de Saúde (CNS)",
+        "NM_PACIENT": "Nome completo do paciente",
+        "NM_MAE_PAC": "Nome completo da mãe do paciente",
+        "NU_CEP": "CEP de residência",
+        "NM_BAIRRO": "Bairro de residência",
+        "NM_LOGRADO": "Logradouro do endereço de residência",
+        "NU_NUMERO": "Número do logradouro",
+        "NM_COMPLEM": "Complemento do endereço",
+        "NU_DDD_TEL": "DDD do telefone de contato",
+        "NU_TELEFON": "Telefone de contato",
+        "NU_DO": "Número da Declaração de Óbito (D.O.)",
+        "REG_PROF": "Registro profissional do notificador",
+        "NOME_PROF": "Nome do profissional responsável pela notificação",
+        "LAB_PCR": "Laboratório que realizou o RT-PCR",
+        "CO_LAB_PCR": "Código CNES do laboratório de RT-PCR",
+        "LAB_AN": "Laboratório que realizou o teste antigênico",
+        "CO_LAB_AN": "Código CNES do laboratório do teste antigênico",
+        "REQUI_GAL": "Número da requisição de exame no sistema GAL",
+        "VG_LAB": "Laboratório responsável pelo sequenciamento genômico",
+        "VG_CODLAB": "Código CNES do laboratório de sequenciamento",
+        "VG_EST": "Estabelecimento responsável pelo preenchimento (Vigilância Genômica)",
+        "VG_PROF": "Profissional responsável pelo preenchimento (Vigilância Genômica/Reinfecção)"
+      }
+    }
+  },
+  "derived_fields": {
+    "AGE_YEARS": {
+      "description": "Idade em anos completos na data dos primeiros sintomas",
+      "precedence": [
+        "convert_by_unit(NU_IDADE_N, TP_IDADE)",
+        "decode_coded_age(COD_IDADE)",
+        "diff_in_years(DT_SIN_PRI, DT_NASC)"
+      ],
+      "algorithms": {
+        "convert_by_unit": {
+          "unit_map": {
+            "1": "days",
+            "2": "months",
+            "3": "years"
+          },
+          "to_years": {
+            "days": "/365.25",
+            "months": "/12",
+            "years": "*1"
+          }
+        },
+        "decode_coded_age": {
+          "spec": "1º dígito = unidade (1=d,2=m,3=a) + 3 dígitos = valor",
+          "to_years": {
+            "1": "/365.25",
+            "2": "/12",
+            "3": "*1"
+          }
+        },
+        "diff_in_years": "floor((DT_SIN_PRI - DT_NASC)/365.25)"
+      },
+      "range": {
+        "min": 0,
+        "max": 150
+      },
+      "missing_policy": "null_if_all_sources_missing"
+    }
+  },
+  "policies": {
+    "age_precedence": "use_first_available",
+    "rounding": "floor_years_for_thresholds",
+    "tie_break": "prefer_convert_over_decode_over_diff"
+  },
+  "validators": {
+    "age_requires_unit": {
+      "level": "error",
+      "rule": "if NU_IDADE_N not null then TP_IDADE in {1,2,3}"
+    },
+    "age_bounds": {
+      "level": "error",
+      "rule": "AGE_YEARS is null or (AGE_YEARS >= 0 and AGE_YEARS <= 150)"
+    },
+    "age_discordance_check": {
+      "level": "warn",
+      "rule": "if NU_IDADE_N/TP_IDADE and DT_NASC/DT_SIN_PRI present, then |AGE_YEARS_convert - AGE_YEARS_diff| <= 1.0 else warn"
+    }
+  },
+  "predicates": {
+    "age_ge": {
+      "params": [
+        "k"
+      ],
+      "expr": "AGE_YEARS >= {{k}}",
+      "requires": [
+        "AGE_YEARS"
+      ]
+    },
+    "age_between": {
+      "params": [
+        "k1",
+        "k2"
+      ],
+      "expr": "AGE_YEARS >= {{k1}} AND AGE_YEARS <= {{k2}}",
+      "requires": [
+        "AGE_YEARS"
+      ]
+    }
+  }
+}

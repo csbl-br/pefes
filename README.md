@@ -1,11 +1,25 @@
 # PEFES — Prompt Engineering for Epidemiological Surveillance  
-**LLM Framework for Reproducible and Validated Epidemiological Analyses using Data Dictionary-Based Analysis**
+**LLM Framework for Reproducible and Validated Epidemiological Analyses Based on Data Dictionaries**
 
 ## Overview
 
 This repository contains the core specification of a prompt-engineering–based system designed to support epidemiological data analysis using Large Language Models (LLMs). The system interprets natural language questions about Brazilian public health surveillance databases (e.g., SINAN, SIVEP) and generates analytical scripts strictly grounded in predefined data dictionaries.
 
 The system is designed to minimize hallucination, enforce methodological rigor, and ensure reproducibility by constraining the LLM to validated variables, datasets, and analytical scopes.
+
+## How to Use
+
+The system is based on a set of core instructions (`pefes_instructions.json`) that define the normative behavior of the LLM, including validation rules, analytical scope, and strict constraints against inventing variables, categories, or data. These instructions constitute the invariant core of the system.
+
+In addition, the model must be provided with the data dictionary corresponding to the epidemiological database to be analyzed (for example, the SINAN Dengue data dictionary). This dictionary formally describes the available variables, their types, domains, and meanings, and serves as the sole authorized reference for analytical script generation.
+
+The core instructions and data dictionaries **must be loaded into the LLM context** prior to user interaction. This can be achieved through different mechanisms, such as:
+
+- **Direct file upload** (e.g., JSON or Markdown files) into the model context;
+- **Prompt injection** via system messages containing the instruction and dictionary contents;
+- **Retrieval-Augmented Generation (RAG)**, in which an external component retrieves version-controlled artifacts from the repository and supplies the relevant content to the model during inference.
+
+In all cases, the LLM **does not autonomously access external repositories or the internet**. All normative and structural knowledge used by the system must be explicitly provided within the interaction context.
 
 ## System Principles
 
@@ -24,14 +38,9 @@ The system operates under the following fundamental principles:
 ## Repository Structure
 
 ```
-/core
-  └── instruction.json        # Core system rules and behavior
+pefes_instructions.json       # Core system rules and behavior
 /dictionaries
   └── *.json                  # Dataset-specific data dictionaries
-/schemas
-  └── response_schema.json    # Expected structure of LLM outputs
-/examples
-  └── *                       # Illustrative input and output examples
 README.md
 ```
 
@@ -49,9 +58,6 @@ README.md
 
 **The system does not execute code or generate numerical results.**
 
-## Usage Model
-
-This repository is intended to be used as a configuration and knowledge source for an LLM-based agent. The contents are loaded into the model context (e.g., via prompt injection or retrieval-augmented generation).
 
 ## Scope and Limitations
 
@@ -69,9 +75,7 @@ All system behavior is fully determined by the versioned contents of this reposi
 
 If you use this system in academic work, please cite the repository and the associated publication (when available).
 
-## Versão em Português (pt-BR) 
-
-# PEFES — Engenharia de Prompts para Vigilância Epidemiológica  
+# PEFES — Engenharia de Prompts para Vigilância Epidemiológica (pt-BR)
 **Framework de LLM para Análises Epidemiológicas Reprodutíveis e Validadas por Dicionários de Dados**
 
 ## Visão Geral
@@ -79,6 +83,20 @@ If you use this system in academic work, please cite the repository and the asso
 Este repositório contém a especificação central de um sistema baseado em engenharia de prompts desenvolvido para apoiar análises epidemiológicas utilizando Modelos de Linguagem de Grande Escala (LLMs). O sistema interpreta perguntas em linguagem natural sobre bases brasileiras de vigilância em saúde pública (por exemplo, SINAN e SIVEP) e gera scripts analíticos estritamente fundamentados em dicionários de dados previamente definidos.
 
 O sistema foi projetado para minimizar alucinações, impor rigor metodológico e garantir reprodutibilidade, restringindo explicitamente o modelo a variáveis, bases de dados e escopos analíticos previamente validados.
+
+## Como utilizar
+
+O sistema é baseado em um conjunto de instruções centrais (`pefes_instructions.json`), que definem o comportamento normativo da LLM, incluindo regras de validação, escopo analítico e restrições contra a invenção de variáveis ou dados. Essas instruções constituem o núcleo invariável do sistema.
+
+Além disso, é necessário fornecer ao modelo o dicionário de dados correspondente à base epidemiológica a ser analisada (por exemplo, o dicionário do SINAN Dengue). Esse dicionário descreve formalmente as variáveis disponíveis, seus tipos, domínios e significados, e funciona como a única fonte autorizada de referência para a geração de scripts analíticos.
+
+As instruções centrais e os dicionários de dados **devem ser carregados no contexto da LLM** antes da interação com o usuário. Esse carregamento pode ser realizado por diferentes meios, tais como:
+
+- **Upload direto de arquivos** (JSON ou Markdown) para o contexto do modelo;
+- **Injeção de prompt** em mensagens de sistema, contendo o conteúdo das instruções e dos dicionários;
+- **Geração aumentada por recuperação (Retrieval-Augmented Generation — RAG)**, na qual um componente externo recupera os arquivos versionados do repositório e fornece os trechos relevantes ao modelo durante a inferência.
+
+Em todos os casos, a LLM **não acessa autonomamente repositórios externos ou a internet**. Todo o conhecimento normativo e estrutural utilizado pelo sistema deve ser explicitamente fornecido no contexto da interação.
 
 ## Princípios do Sistema
 
@@ -97,14 +115,9 @@ O sistema opera segundo os seguintes princípios fundamentais:
 ## Estrutura do Repositório
 
 ```
-/core
-└── instruction.json
+instruction.json                 # Regras e comportamento do sistema principal
 /dictionaries
-└── *.json
-/schemas
-└── response_schema.json
-/examples
-└── *
+└── *.json                       # Dicionários de dados específicos para cada conjunto de dados
 README.md
 ```
 
@@ -123,13 +136,9 @@ README.md
 
 **O sistema não executa código nem gera resultados numéricos.**
 
-## Modelo de Uso
-
-Este repositório foi concebido para ser utilizado como uma fonte de configuração e conhecimento para um agente baseado em LLM. Seu conteúdo é carregado no contexto do modelo (por exemplo, via injeção de prompt ou geração aumentada por recuperação — RAG).
-
 ## Escopo e Limitações
 
-* O sistema oferece suporte exclusivamente à geração de scripts, não à execução de  modelos ou inferência.
+* O sistema oferece suporte exclusivamente à geração de scripts, não à execução de modelos ou inferência.
 
 * As capacidades analíticas estão limitadas ao que é tecnicamente viável com as variáveis disponíveis nos dicionários de dados.
 
