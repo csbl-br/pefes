@@ -51,6 +51,8 @@ total_probable_count = len(probable_cases_df)
 print(f"Total probable Dengue cases in Maranhão (2023): {total_probable_count}")
 
 ```
+#### Answer:
+`Total probable Dengue cases in Maranhão (2023): 4799`
 
 ### Question 2 - Distribution of cases per sex
 
@@ -103,6 +105,14 @@ descriptive_table = pd.concat([descriptive_table, total_row], ignore_index=True)
 # Display the result
 print(descriptive_table.round(2))
 ```
+#### Answer:
+| Category | N | % |
+| :--- | :--- | :--- |
+| Female | 2622 | 54.64 |
+| Male | 2175 | 45.32 |
+| Ignored | 2 | 0.04 |
+| **Total** | **4799** | **100.00** |
+
 ### Question 3 - Distribution of cases per age
 
 #### Prompt
@@ -175,4 +185,26 @@ age_summary = pd.concat([age_summary, total_row], ignore_index=True)
 print(age_summary.round(2))
 ```
 
-### observacoes
+#### Answer:
+| Age Group | N | % |
+| :--- | :--- | :--- |
+| <1 | 114 | 2.38 |
+| 1–4 | 236 | 4.92 |
+| 5–9 | 473 | 9.86 |
+| 10–14 | 494 | 10.29 |
+| 15–19 | 471 | 9.81 |
+| 20–39 | 1580 | 32.92 |
+| 40–59 | 975 | 20.32 |
+| 60–64 | 145 | 3.02 |
+| 65–69 | 122 | 2.54 |
+| 70–79 | 145 | 3.02 |
+| 80+ | 44 | 0.92 |
+| **Total** | **4799** | **100.00** |
+
+
+### Notes
+
+* **Case Definition**: All notifications under CID-10 code `A90` were considered probable cases, following 2022 guidelines that removed the "Discarded" category from the `CLASSI_FIN` variable.
+* **Age Calculation**: The `NU_IDADE_N` variable was decoded by identifying the first digit as the time unit (hour, day, month, year) to ensure precise age grouping.
+* **Data Completeness**: "Ignored" values in sex and age categories reflect missing information common in passive surveillance systems.
+* **PEFES Compliance**: The analysis strictly follows the active data dictionary, using only validated variables and deterministic transformations for derived fields.
