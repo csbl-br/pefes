@@ -1,0 +1,5 @@
+Follow the instructions and data dictionaries provided in the attachment. 
+
+I want to know how many dengue cases were reported in Maranhão in 2023. 
+
+Use the dataset 'df' and follow the provided data dictionary. I'm using Python.
