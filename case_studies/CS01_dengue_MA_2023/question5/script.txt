@@ -1,0 +1,55 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Validate required columns
+required_cols = ["ID_AGRAVO", "NU_ANO", "SG_UF_NOT", "CRITERIO"]
+missing = [col for col in required_cols if col not in df.columns]
+if missing:
+    raise ValueError(f"Missing columns: {missing}")
+
+# Filter dataset
+df_filtered = df[
+    (df["ID_AGRAVO"] == "A90") &   # Dengue
+    (df["NU_ANO"] == 2023) &       # Year
+    (df["SG_UF_NOT"] == 21)        # Maranhão
+].copy()
+
+# Map confirmation criteria (ensure codes match your dataset)
+criterio_map = {
+    1: "Laboratory",
+    2: "Clinical-epidemiological",
+    3: "Clinical",
+    4: "Ignored"
+}
+
+df_filtered["criterio_label"] = df_filtered["CRITERIO"].map(criterio_map)
+
+# Handle missing/unmapped values
+df_filtered["criterio_label"] = df_filtered["criterio_label"].fillna("Missing")
+
+# Aggregate counts
+table = (
+    df_filtered
+    .groupby("criterio_label", dropna=False)
+    .size()
+    .reset_index(name="cases")
+)
+
+# Calculate percentages
+total = table["cases"].sum()
+table["percentage"] = (table["cases"] / total * 100).round(2)
+
+# Sort for readability
+table = table.sort_values("cases", ascending=False)
+
+print(table)
+
+# Plot
+plt.figure()
+plt.bar(table["criterio_label"], table["percentage"])
+plt.xlabel("Confirmation criterion")
+plt.ylabel("Percentage (%)")
+plt.title("Dengue cases by confirmation criterion (%) - Maranhão (2023)")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()

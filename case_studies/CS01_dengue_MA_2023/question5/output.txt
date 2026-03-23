@@ -1,0 +1,6 @@
+| Confirmation Criterion     | Cases | Percentage (%) |
+|--------------------------|------:|---------------:|
+| Laboratory               | 2428  | 50.59          |
+| Clinical-epidemiological | 1614  | 33.63          |
+| Missing                  | 609   | 12.69          |
+| Clinical                 | 148   | 3.08           |

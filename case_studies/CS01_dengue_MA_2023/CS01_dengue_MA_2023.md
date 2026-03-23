@@ -462,7 +462,6 @@ plt.show()
 
 #### Answer:
 
-
 | Confirmation Criterion     | Cases | Percentage (%) |
 |--------------------------|------:|---------------:|
 | Laboratory               | 2428  | 50.59          |

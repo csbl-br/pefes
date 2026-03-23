@@ -1,0 +1,1 @@
+Analyze dengue notifications in Maranhão (UF = 21) for 2023 and describe how cases evolved over time, using epidemiological weeks, with a line plot.

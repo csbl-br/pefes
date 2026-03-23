@@ -1,0 +1,8 @@
+| Race/Color | Cases | Percentage (%) |
+|------------|------:|---------------:|
+| Brown      | 3842  | 80.06          |
+| White      | 589   | 12.27          |
+| Black      | 225   | 4.69           |
+| Ignored    | 87    | 1.81           |
+| Asian      | 44    | 0.92           |
+| Indigenous | 12    | 0.25           |
