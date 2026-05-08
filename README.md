@@ -44,6 +44,10 @@ pefes_instructions.json       # Core system rules and behavior
 README.md
 ```
 
+## Case Studies
+
+Worked examples demonstrating system usage across different epidemiological scenarios are available at [pefes.sysbio.tools](https://pefes.sysbio.tools/).
+
 ## System Workflow
 
 1. Question interpretation: the system parses the user’s natural language query.
@@ -118,12 +122,12 @@ O sistema opera segundo os seguintes princípios fundamentais:
 pefes_instructions.json     # Regras e comportamento do sistema principal
 /dictionaries
 └── *.json                  # Dicionários de dados específicos 
-/examples
-└── * 
-└── *
-└── *
 README.md
 ```
+
+## Estudos de Caso
+
+Exemplos de uso do sistema em diferentes cenários epidemiológicos estão disponíveis em [pefes.sysbio.tools](https://pefes.sysbio.tools/).
 
 
 ## Fluxo de Funcionamento do Sistema
