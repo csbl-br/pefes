@@ -1,7 +1,0 @@
-| Final Classification           | Cases | Percentage (%) |
-|--------------------------------|------:|---------------:|
-| Dengue                         | 4009  | 83.54          |
-| Inconclusive                   | 614   | 12.79          |
-| Dengue with warning signs      | 152   | 3.17           |
-| Severe dengue                  | 19    | 0.40           |
-| Missing                        | 5     | 0.10           |

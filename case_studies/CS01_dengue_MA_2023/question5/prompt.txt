@@ -1,5 +1,0 @@
-Follow the instructions and data dictionaries provided in the attachment. 
-
-I want to see how dengue cases are distributed by confirmation criteria in Maranhão in 2023. Make a table including percentages and a plot. 
-
-Use the dataset 'df' and follow the provided data dictionary. I'm using Python.

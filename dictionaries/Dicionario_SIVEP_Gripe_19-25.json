@@ -3,6 +3,37 @@
     "description": "Estrutura de dados do SIVEP Gripe - Sistema de Informação da Vigilância Epidemiológica da Gripe",
     "source": "Ministério da Saúde - SVS"
   },
+  "codelists": {
+    "uf_codes": {
+      "AC": "Acre",
+      "AL": "Alagoas",
+      "AM": "Amazonas",
+      "AP": "Amapá",
+      "BA": "Bahia",
+      "CE": "Ceará",
+      "DF": "Distrito Federal",
+      "ES": "Espírito Santo",
+      "GO": "Goiás",
+      "MA": "Maranhão",
+      "MG": "Minas Gerais",
+      "MS": "Mato Grosso do Sul",
+      "MT": "Mato Grosso",
+      "PA": "Pará",
+      "PB": "Paraíba",
+      "PE": "Pernambuco",
+      "PI": "Piauí",
+      "PR": "Paraná",
+      "RJ": "Rio de Janeiro",
+      "RN": "Rio Grande do Norte",
+      "RO": "Rondônia",
+      "RR": "Roraima",
+      "RS": "Rio Grande do Sul",
+      "SC": "Santa Catarina",
+      "SE": "Sergipe",
+      "SP": "São Paulo",
+      "TO": "Tocantins"
+    }
+  },
   "allowed_variables": [
     "NU_NOTIFIC",
     "DT_NOTIFIC",
@@ -455,7 +486,8 @@
       "name": "UF",
       "description": "Unidade Federativa onde está localizada a Unidade que realizou a notificação. Campo Obrigatório.",
       "data_type": "character",
-      "field_type": "char(6)",
+      "field_type": "char(2)",
+      "values_ref": "codelists.uf_codes",
       "anos_disponiveis": [
         2019,
         2020,
@@ -794,6 +826,7 @@
       "description": "Unidade Federativa de residência do paciente. Campo Obrigatório.",
       "data_type": "character",
       "field_type": "char(2)",
+      "values_ref": "codelists.uf_codes",
       "anos_disponiveis": [
         2019,
         2020,
@@ -2350,6 +2383,7 @@
       "description": "Unidade Federativa de internação do paciente). Campo Essencial. Habilitado se houve 'HOSPITAL - Internação' = '1 - Sim'.",
       "data_type": "character",
       "field_type": "char(2)",
+      "values_ref": "codelists.uf_codes",
       "anos_disponiveis": [
         2019,
         2020,
